@@ -83,7 +83,7 @@ programs.starship = {
       behind = "⇣";
       stashed = " ";
       modified = " ";
-      staged = "[++]";
+      staged = "++";
       renamed = "襁 ";
       deleted = " ";
     };

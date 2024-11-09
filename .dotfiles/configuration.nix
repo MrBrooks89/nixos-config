@@ -20,11 +20,12 @@
   };
   
   # Shell config
+  # required to be able to use zsh as default shell
   programs.zsh.enable = true;
-  users.users.mrbrooks.shell = pkgs.zsh;
-  programs.starship.enable = true;
-  programs.zsh.autosuggestions.enable = true;
-  programs.zsh.syntaxHighlighting.enable = true;
+#   users.users.mrbrooks.shell = pkgs.zsh;
+#   programs.starship.enable = true;
+#   programs.zsh.autosuggestions.enable = true;
+#   programs.zsh.syntaxHighlighting.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -87,66 +88,66 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.mrbrooks = {
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.mrbrooks = {
     isNormalUser = true;
     description = "mrbrooks";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
+};
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
 
   environment.systemPackages = with pkgs; [
-   bottles
-   btop
-   cmatrix
-   cider
-   discord
-   dunst
-   eza
-   fastfetch
-   floorp
-   gamescope
-   git
-   go
-   goverlay
-   grim
-   hyprcursor
-   inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
-   kdePackages.kate
-   kitty
-   libnotify
-   mangohud
-   nautilus
-   nwg-look
-   pavucontrol
-   playerctl
-   protonup-ng
-   python3
-   python311Packages.pip
-   rocmPackages.rpp
-   rocmPackages.rocm-smi
-   rofi-wayland
-   slurp
-   starship
-   swaybg
-   swaylock-effects
-   swappy
-   swww
-   teams-for-linux
-   unzip
-   vim
-   vscode
-   waybar
-   wget
-   wl-clipboard
-   wofi
-   xdotool
-   zsh
+#    bottles
+#    btop
+#    cmatrix
+#    cider
+#    discord
+#    dunst
+#    eza
+#    fastfetch
+#    floorp
+#    gamescope
+    git
+#    go
+#    goverlay
+#    grim
+#    hyprcursor
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+#    kdePackages.kate
+#    kitty
+#    libnotify
+#    mangohud
+#    nautilus
+#    nwg-look
+#    pavucontrol
+#    playerctl
+#    protonup-ng
+#    python3
+#    python311Packages.pip
+#    rocmPackages.rpp
+#    rocmPackages.rocm-smi
+#    rofi-wayland
+#    slurp
+#    starship
+#    swaybg
+#    swaylock-effects
+#    swappy
+#    swww
+#    teams-for-linux
+#    unzip
+#    vim
+#    vscode
+#    waybar
+#    wget
+#    wl-clipboard
+#    wofi
+#    xdotool
+#    zsh
 ];
 
 
