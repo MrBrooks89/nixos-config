@@ -19,14 +19,12 @@
     xwayland.enable = true;
   };
   
-  # Enable miracel-wm window manager
-  programs.wayland.miracle-wm.enable = true;
-  
   # Shell config
   programs.zsh.enable = true;
   users.users.mrbrooks.shell = pkgs.zsh;
   programs.starship.enable = true;
-  
+  programs.zsh.autosuggestions.enable = true; 
+  programs.zsh.syntaxHighlighting.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
