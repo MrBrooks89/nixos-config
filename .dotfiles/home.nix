@@ -57,168 +57,135 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-  
-#   programs.starship = {
-#   enable = true;
-  
-#   settings = {
-#     # General Starship settings
-#     add_newline = false;
-#     command_timeout = 1000;
-#     format = ''
-#     $character
-#     $os$hostname
-#     $directory
-#     $git_branch
-#     $git_status
-#     $python
-#     $aws
-#     $golang
-#     $java
-#     $nodejs
-#     $fill
-#     [└─>](bold green) '';
 
-#     # Character module
-#     character = {
-#       success_symbol = "🚀 ";
-#       error_symbol = "🔥 ";
-#     };
-    
-#     # Fill module
-#     fill = {
-#       symbol = " ";
-#     };
+  programs.starship = {
+  enable = true;
 
-#     # Time module
-#     time = {
-#       disabled = false;
-#       time_format = "%r";
-#       style = "bg:#1d2230";
-#       format = "[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)";
-#     };
+  settings = {
+    # General Starship settings
+    add_newline = false;
+    command_timeout = 1000;
+    format = ''
+    $character$os$hostname$directory$git_branch$git_status$python$aws$golang$java$nodejs
+    $fill
+    [└─>](bold green)'';
 
-#     # Command duration module
-#     cmd_duration = {
-#       format = "last command: [$duration](bold yellow)";
-#     };
+    # Character module
+    character = {
+      success_symbol = "🚀 ";
+      error_symbol = "🔥 ";
+    };
 
-#     # OS module
-#     os = {
-#       format = "[$symbol](bold white) ";
-#       disabled = false;
-#       symbols = { Macos = "󰀵"; };
-#     };
+    # Fill module
+    fill = {
+      symbol = " ";
+    };
 
-#     # Hostname module
-#     hostname = {
-#       ssh_only = false;
-#       format = "on [$hostname](bold yellow) ";
-#       disabled = false;
-#       ssh_symbol = " ";
-#     };
+    # Time module
+    time = {
+      disabled = false;
+      time_format = "%r";
+      style = "bg:#1d2230";
+      format = "[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)";
+    };
 
-#     # Directory module
-#     directory = {
-#       truncation_length = 3;
-#       fish_style_pwd_dir_length = 2;
-#       home_symbol = "󰋜 ~";
-#       read_only_style = "197";
-#       read_only = "  ";
-#       format = "at [$path]($style)[$read_only]($read_only_style)";
-#     };
+    # Command duration module
+    cmd_duration = {
+      format = "last command: [$duration](bold yellow)";
+    };
 
-#     # Git branch module
-#     git_branch = {
-#       symbol = " ";
-#       format = "via [$symbol$branch]($style)";
-#       truncation_symbol = "…/";
-#       style = "bold red";
-#     };
+    # OS module
+    os = {
+      format = "[$symbol](bold white) ";
+      disabled = false;
+      symbols = { Macos = "󰀵"; };
+    };
 
-#     # Git status module
-#     git_status = {
-#       format = "[$all_status$ahead_behind]($style) ";
-#       style = "bold green";
-#       conflicted = "🏳";
-#       up_to_date = "";
-#       untracked = " ";
-#       ahead = "⇡";
-#       diverged = "⇕⇡⇣";
-#       behind = "⇣";
-#       stashed = " ";
-#       modified = " ";
-#       staged = "[++]";
-#       renamed = "襁 ";
-#       deleted = " ";
-#     };
+    # Hostname module
+    hostname = {
+      ssh_only = false;
+      format = "on [$hostname](bold yellow) ";
+      disabled = false;
+      ssh_symbol = " ";
+    };
 
-#     # AWS module
-#     aws = {
-#       symbol = "  ";
-#     };
+    # Directory module
+    directory = {
+      truncation_length = 3;
+      fish_style_pwd_dir_length = 2;
+      home_symbol = "󰋜 ~";
+      read_only_style = "197";
+      read_only = "  ";
+      format = "at [$path]($style)[$read_only]($read_only_style)";
+    };
 
-#     # Python module
-#     python = {
-#       symbol = " ";
-#       pyenv_version_name = true;
-#     };
+    # Git branch module
+    git_branch = {
+      symbol = " ";
+      format = "via [$symbol$branch]($style)";
+      truncation_symbol = "…/";
+      style = "bold red";
+    };
 
-#     # Go module
-#     golang = {
-#       symbol = " ";
-#     };
+    # Git status module
+    git_status = {
+      format ="[$all_status$ahead_behind]($style) ";
+      style = "bold green";
+      conflicted = "🏳";
+      up_to_date = "";
+      untracked = " ";
+      ahead = "⇡";
+      diverged = "⇕⇡⇣";
+      behind = "⇣";
+      stashed = " ";
+      modified = " ";
+      staged = "[++]";
+      renamed = "襁 ";
+      deleted = " ";
+    };
 
-#     # Java module
-#     java = {
-#       symbol = " ";
-#     };
+    # AWS module
+    aws = {
+      symbol = "  ";
+    };
 
-#     # NodeJS module
-#     nodejs = {
-#       symbol = " ";
-#     };
-#   };
-# };
+    # Python module
+    python = {
+      symbol = " ";
+      pyenv_version_name = true;
+    };
 
-  
-  # programs.zsh = {
-  #   enable = true;
-  #   autocd = true;
-  #   #enabelAutosuggestions = true;
-  #   enableCompletion = true;
-  #   shellAliases = {
-  #     ll = "exa -al --icons";
-  #     ls = "exa -a --icons";
-  #     lt = "exa -a --tree --level=1 --icons";
-  #   };
-    
-  #   plugins = with pkgs; [
-  #     {
-  #       name = "agkozak-zsh-prompt";
-  #       src = fetchFromGitHub {
-  #         owner = "agkozak";
-  #         repo = "agkozak-zsh-prompt";
-  #         rev = "v3.7.0";
-  #         sha256 = "1iz4l8777i52gfynzpf6yybrmics8g4i3f1xs3rqsr40bb89igrs";
-  #       };
-  #       file = "agkozak-zsh-prompt.plugin.zsh";
-  #     }
-  #     {
-  #       name = "zsh-syntax-highlighting";
-  #       src = fetchFromGitHub {
-  #         owner = "zsh-users";
-  #         repo = "zsh-syntax-highlighting";
-  #         rev = "0.6.0";
-  #         sha256 = "0zmq66dzasmr5pwribyh4kbkk23jxbpdw4rjxx0i7dx8jjp2lzl4";
-  #       };
-  #       file = "zsh-syntax-highlighting.zsh";
-  #     }
-  #   ];
-  # };
-  
+    # Go module
+    golang = {
+      symbol = " ";
+    };
+
+    # Java module
+    java = {
+      symbol = " ";
+    };
+
+    # NodeJS module
+    nodejs = {
+      symbol = " ";
+    };
+  };
+};
+
+
+  programs.zsh = {
+    enable = true;
+    autocd = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+    enableCompletion = true;
+    shellAliases = {
+      ll = "exa -al --icons";
+      ls = "exa -a --icons";
+      lt = "exa -a --tree --level=1 --icons";
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
-
-
