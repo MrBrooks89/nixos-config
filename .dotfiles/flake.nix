@@ -9,9 +9,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, nur, ... } @ inputs:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -23,6 +24,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
+          nur.nixosModules.nur
         ];
       };
     };
@@ -30,7 +32,10 @@
     homeConfigurations = {
       mrbrooks = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [
+        ./home.nix
+        inputs.nur.hmModules.nur
+        ];
       };
     };
     };

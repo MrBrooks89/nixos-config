@@ -6,7 +6,7 @@ imports =
     [ # Include the results of the hardware scan.
       ./starship.nix
       ./zsh.nix
-      ./vm.nix
+      ./bat.nix
     ];
 
 
@@ -66,6 +66,9 @@ imports =
    xdotool
   ];
 
+  programs = {
+    fzf.enable = true;
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

@@ -5,16 +5,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    #defaultKeymap = "emacs";
-    localVariables = {
-      PROMPT = "%F{green} ➜ %f";
-      RPROMPT = "%F{blue}%~ ";
-    };
-    profileExtra = ''
-      if [[ "$(tty)" = "/dev/tty1" ]]; then
-        pgrep i3 || startx $(which i3)
-      fi
-    '';
+    sessionVariables = {
+      GOPATH = "/home/mrbrooks/go/bin";
+   };
     plugins = [
       {
         name = "zsh-autopair";
@@ -28,7 +21,7 @@
       }
     ];
     shellAliases = {
-      #"cat" = "bat";
+      "cat" = "bat";
       "ll" = "exa -al --icons";
       "ls" = "exa -a --icons";
       "lt" = "exa -a --tree --level=1 --icons";
