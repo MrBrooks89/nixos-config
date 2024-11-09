@@ -103,7 +103,9 @@
 
   environment.systemPackages = with pkgs; [
     git
+    kitty
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+
 
 ];
 
