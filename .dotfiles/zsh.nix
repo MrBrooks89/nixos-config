@@ -6,7 +6,9 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     sessionVariables = {
-      GOPATH = "/home/mrbrooks/go/bin";
+      PATH = "$HOME/go/bin:$PATH";
+      ARUBA_ACCESS_TOKEN="your_token_here";
+
    };
     plugins = [
       {
