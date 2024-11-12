@@ -138,6 +138,19 @@
   # Disable IPv6
   networking.enableIPv6 = false;
 
+
+  # Set Unsecure Algorithms for 2960x SSH connection
+  programs.ssh.extraConfig = ''
+    Host 192.168.4.25
+        KexAlgorithms +diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+        Ciphers +aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+        HostKeyAlgorithms +ssh-rsa
+        PubkeyAcceptedAlgorithms +ssh-rsa
+  '';
+
+
+
+
   # It‘s perfectly fine and recommended to leave  this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
