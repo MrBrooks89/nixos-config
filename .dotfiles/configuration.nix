@@ -139,14 +139,14 @@
   networking.enableIPv6 = false;
 
 
-  # Set Unsecure Algorithms for 2960x SSH connection
-  programs.ssh.extraConfig = ''
-    Host 192.168.4.25
-        KexAlgorithms +diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
-        Ciphers +aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
-        HostKeyAlgorithms +ssh-rsa
-        PubkeyAcceptedAlgorithms +ssh-rsa
-  '';
+#   # Set Unsecure Algorithms for 2960x SSH connection
+#   programs.ssh.extraConfig = ''
+#     Host 192.168.4.25
+#         KexAlgorithms +diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+#         Ciphers +aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+#         HostKeyAlgorithms +ssh-rsa
+#         PubkeyAcceptedAlgorithms +ssh-rsa
+#   '';
 
 
 

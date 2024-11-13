@@ -11,8 +11,10 @@
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
-    spice spice-gtk
+    spice-gtk
     spice-protocol
+    spice-vdagent
+    spice-autorandr
     win-virtio
     win-spice
     pkgs.adwaita-icon-theme

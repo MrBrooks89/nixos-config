@@ -36,6 +36,7 @@ imports =
    grim
    hyprcursor
    kdePackages.kate
+   kdePackages.konsole
    kitty
    libnotify
    mangohud
