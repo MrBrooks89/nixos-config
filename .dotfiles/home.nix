@@ -63,6 +63,7 @@ imports =
    waybar
    wget
    wl-clipboard
+   wireshark
    wofi
    xdotool
   ];
