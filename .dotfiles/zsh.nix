@@ -7,9 +7,16 @@
     syntaxHighlighting.enable = true;
     sessionVariables = {
       PATH = "$HOME/go/bin:$PATH";
-      ARUBA_ACCESS_TOKEN="your_token_here";
 
    };
+
+   # Use initExtra to source environment variables from the .env file
+    initExtra = ''
+      if [ -f "$HOME/.env" ]; then
+        export $(cat $HOME/.env | xargs)
+      fi
+    '';
+
     plugins = [
       {
         name = "zsh-autopair";
