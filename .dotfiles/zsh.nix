@@ -7,8 +7,7 @@
     syntaxHighlighting.enable = true;
     sessionVariables = {
       PATH = "$HOME/go/bin:$PATH";
-      QT_QPA_PLATFORM = "wayland";
-      GTK_THEME = "Dracula";
+      QT_STYLE_OVERRIDE = "Dracula";
    };
 
    # Use initExtra to source environment variables from the .env file
