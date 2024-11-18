@@ -19,13 +19,10 @@
     xwayland.enable = true;
   };
   
-  # Shell config
-  # required to be able to use zsh as default shell
+
+  # Required to be able to use zsh as default shell
   programs.zsh.enable = true;
-#   users.users.mrbrooks.shell = pkgs.zsh;
-#   programs.starship.enable = true;
-#   programs.zsh.autosuggestions.enable = true;
-#   programs.zsh.syntaxHighlighting.enable = true;
+
 
   # Enable networking
   networking.networkmanager.enable = true;
