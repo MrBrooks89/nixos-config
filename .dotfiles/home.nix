@@ -52,6 +52,7 @@ imports =
    rofi-wayland
    slurp
    starship
+   steamtinkerlaunch
    swaybg
    swaylock-effects
    swappy
