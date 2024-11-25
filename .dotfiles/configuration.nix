@@ -75,14 +75,26 @@
   services.printing.enable = true;
   
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.support32Bit = true;
+  nixpkgs.config.pulseaudio = true;
+  services.pipewire.enable = false;
+#   security.rtkit.enable = true;
+#   services.pipewire = {
+#     enable = true;
+#     alsa.enable = true;
+#     alsa.support32Bit = true;
+#     pulse.enable = true;
+#   };
+
+#   services.pipewire.extraConfig.pipewire."92-low-latency" = {
+#     "context.properties" = {
+#       "default.clock.rate" = 48000;
+#       "default.clock.quantum" = 32;
+#       "default.clock.min-quantum" = 32;
+#       "default.clock.max-quantum" = 32;
+#     };
+#   };
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -91,7 +103,7 @@
     users.mrbrooks = {
     isNormalUser = true;
     description = "mrbrooks";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
   };
 };
 
