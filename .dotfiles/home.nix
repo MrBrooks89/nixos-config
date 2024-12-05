@@ -29,6 +29,7 @@ imports =
    dunst
    eza
    fastfetch
+   firefox
    floorp
    gamescope
    go
