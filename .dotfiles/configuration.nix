@@ -125,7 +125,7 @@
   font-awesome
   powerline-fonts
   powerline-symbols
-  (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  nerd-fonts.jetbrains-mono
   ];
 
   # Enables and installs steam

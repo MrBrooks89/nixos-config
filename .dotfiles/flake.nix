@@ -24,7 +24,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          nur.nixosModules.nur
+          nur.modules.nixos.default
         ];
       };
     };
