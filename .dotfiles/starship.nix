@@ -2,9 +2,11 @@
 
 {
 
+catppuccin.starship.enable = true;
+catppuccin.starship.flavor = "mocha";
+
 programs.starship = {
   enable = true;
-
   settings = {
     # General Starship settings
     add_newline = false;
