@@ -9,10 +9,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur.url = "github:nix-community/NUR";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { nixpkgs, home-manager, nur, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, catppuccin, ... } @ inputs:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -24,7 +24,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          nur.modules.nixos.default
+          catppuccin.nixosModules.catppuccin
         ];
       };
     };
@@ -34,7 +34,7 @@
         inherit pkgs;
         modules = [
         ./home.nix
-        inputs.nur.hmModules.nur
+        catppuccin.homeManagerModules.catppuccin
         ];
       };
     };

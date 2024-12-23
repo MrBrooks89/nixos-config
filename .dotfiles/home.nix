@@ -6,7 +6,6 @@ imports =
     [ # Include the results of the hardware scan.
       ./starship.nix
       ./zsh.nix
-      ./bat.nix
     ];
 
 
@@ -17,10 +16,13 @@ imports =
 
 
   home.stateVersion = "24.11"; # Please read the comment before changing.
+    
+
 
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+   bat
    bottles
    btop
    cmatrix
@@ -58,6 +60,7 @@ imports =
    swaylock-effects
    swappy
    swww
+   tcpdump
    teams-for-linux
    unzip
    vim
@@ -73,6 +76,11 @@ imports =
   programs = {
     fzf.enable = true;
   };
+  catppuccin.fzf.enable = true;
+  catppuccin.fzf.flavor = "mocha"; 
+  catppuccin.bat.enable = true;
+  catppuccin.bat.flavor = "mocha";
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

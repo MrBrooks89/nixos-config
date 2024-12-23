@@ -12,6 +12,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
  
   networking.hostName = "nixos"; 
+
   
   # Enable hyprland
   programs.hyprland = {
@@ -75,17 +76,17 @@
   services.printing.enable = true;
   
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-#   hardware.pulseaudio.support32Bit = true;
-#   nixpkgs.config.pulseaudio = true;
-#   services.pipewire.enable = false;
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.support32Bit = true;
+  nixpkgs.config.pulseaudio = true;
+  services.pipewire.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+ # services.pipewire = {
+ #   enable = true;
+ #   alsa.enable = true;
+ #   alsa.support32Bit = true;
+ #   pulse.enable = true;
+ # };
 
 #   services.pipewire.extraConfig.pipewire."92-low-latency" = {
 #     "context.properties" = {
