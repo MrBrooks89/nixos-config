@@ -2,8 +2,13 @@
 
 {
 
-catppuccin.starship.enable = true;
-catppuccin.starship.flavor = "mocha";
+catppuccin = {
+  enable = true;
+  starship = {
+   enable = true;
+   flavor = "latte";
+  };
+};
 
 programs.starship = {
   enable = true;

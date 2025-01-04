@@ -76,10 +76,22 @@ imports =
   programs = {
     fzf.enable = true;
   };
-  catppuccin.fzf.enable = true;
-  catppuccin.fzf.flavor = "mocha"; 
-  catppuccin.bat.enable = true;
-  catppuccin.bat.flavor = "mocha";
+
+  catppuccin = {
+    enable = true;
+    fzf = {
+     enable = true;
+     flavor = "latte";
+    }; 
+    bat = {
+     enable = true;
+     flavor = "latte";
+    };
+    kitty = {
+     enable = true;
+     flavor = "latte";
+    };
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
