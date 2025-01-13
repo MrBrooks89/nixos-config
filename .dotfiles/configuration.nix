@@ -106,11 +106,6 @@
     description = "mrbrooks";
     extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
   };
-    users.mrsbrooks = {
-    isNormalUser = true;
-    description = "mrsbrooks";
-    extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
-  };
 };
   
 

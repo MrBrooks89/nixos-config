@@ -39,14 +39,6 @@
         ];
       };
 
-      # Home Manager configuration for mrsbrooks
-      mrsbrooks = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home-mrsbrooks.nix
-          catppuccin.homeManagerModules.catppuccin
-        ];
-      };
     };
   };
 }
