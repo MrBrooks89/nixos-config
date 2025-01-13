@@ -104,12 +104,12 @@
     users.mrbrooks = {
     isNormalUser = true;
     description = "mrbrooks";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
   };
     users.mrsbrooks = {
     isNormalUser = true;
     description = "mrsbrooks";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
   };
 };
   
