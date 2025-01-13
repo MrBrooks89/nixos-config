@@ -106,7 +106,13 @@
     description = "mrbrooks";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
   };
+    users.mrsbrooks = {
+    isNormalUser = true;
+    description = "mrsbrooks";
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
+  };
 };
+  
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

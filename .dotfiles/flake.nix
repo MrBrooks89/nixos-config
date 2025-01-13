@@ -1,5 +1,5 @@
 {
-  description = "My first flake!";
+  description = "My flake for multiple users";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -30,13 +30,23 @@
     };
 
     homeConfigurations = {
+      # Home Manager configuration for mrbrooks
       mrbrooks = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-        ./home.nix
-        catppuccin.homeManagerModules.catppuccin
+          ./home.nix
+          catppuccin.homeManagerModules.catppuccin
+        ];
+      };
+
+      # Home Manager configuration for mrsbrooks
+      mrsbrooks = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home-mrsbrooks.nix
+          catppuccin.homeManagerModules.catppuccin
         ];
       };
     };
-    };
+  };
 }
