@@ -65,6 +65,7 @@ imports =
    teams-for-linux
    unzip
    vim
+   vlc
    vscode
    waybar
    wget
