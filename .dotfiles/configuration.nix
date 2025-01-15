@@ -73,7 +73,34 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [ cnijfilter2 ];
+   };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+   };
+    
+
+
+  #hardware.printers = {
+  #  ensurePrinters = [
+  #   {
+  #    name = "Canon_MB2720";
+  #    location = "Home";
+  #    deviceUri = "http://192.168.4.114:631/";
+  #    model = "canonmb2700.ppd";
+  #    ppdOptions = {
+  #    PageSize = "A4"; 
+  #    };
+  #  }
+  #];
+  #  ensureDefaultPrinter = "Canon_MB2720";
+#};
+
   
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = true;
