@@ -86,25 +86,25 @@
     
 
 
-  #hardware.printers = {
-  #  ensurePrinters = [
-  #   {
-  #    name = "Canon_MB2720";
-  #    location = "Home";
-  #    deviceUri = "http://192.168.4.114:631/";
-  #    model = "canonmb2700.ppd";
-  #    ppdOptions = {
-  #    PageSize = "A4"; 
-  #    };
-  #  }
-  #];
-  #  ensureDefaultPrinter = "Canon_MB2720";
-#};
+  hardware.printers = {
+    ensurePrinters = [
+     {
+      name = "Canon_MB2720";
+      location = "Home";
+      deviceUri = "http://192.168.4.114:631/";
+      model = "canonmb2700.ppd";
+      ppdOptions = {
+      PageSize = "Letter Small"; 
+      };
+    }
+  ];
+    ensureDefaultPrinter = "Canon_MB2720";
+};
 
   
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.support32Bit = true;
+  services.pulseaudio.enable = true;
+  services.pulseaudio.support32Bit = true;
   nixpkgs.config.pulseaudio = true;
   services.pipewire.enable = false;
   security.rtkit.enable = true;
