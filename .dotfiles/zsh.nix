@@ -7,6 +7,8 @@
     syntaxHighlighting.enable = true;
     sessionVariables = {
       PATH = "$HOME/go/bin:$PATH";
+#      GOBIN = "$HOME/go/bin";
+#      GOPATH = "$HOME/go/bin:$PATH";
    };
 
    # Use initExtra to source environment variables from the .env file

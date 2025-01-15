@@ -27,6 +27,7 @@ imports =
    btop
    cmatrix
    cider
+   dig
    discord
    dunst
    eza
