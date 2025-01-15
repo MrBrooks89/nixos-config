@@ -85,7 +85,7 @@
    };
     
 
-
+  # Manully Set Canon Printer
   hardware.printers = {
     ensurePrinters = [
      {
@@ -94,7 +94,7 @@
       deviceUri = "http://192.168.4.114:631/";
       model = "canonmb2700.ppd";
       ppdOptions = {
-      PageSize = "Letter Small"; 
+       PageSize = "Letter Small"; 
       };
     }
   ];
