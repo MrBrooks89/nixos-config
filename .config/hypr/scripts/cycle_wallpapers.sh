@@ -4,7 +4,7 @@
 swww init
 
 # Set the duration for each image (in seconds)
-DURATION=60
+DURATION=300
 
 # Specify the full path to your Pictures directory
 PICTURES_DIR="/home/mrbrooks/Pictures"
