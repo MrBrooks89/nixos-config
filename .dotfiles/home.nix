@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
 
@@ -34,6 +34,7 @@ imports =
    fastfetch
    floorp
    gamescope
+   gearlever
    go
    google-chrome
    goverlay
@@ -43,6 +44,7 @@ imports =
    kdePackages.konsole
    kitty
    libnotify
+   libreoffice-qt6-fresh
    mangohud
    nautilus
    nwg-look
