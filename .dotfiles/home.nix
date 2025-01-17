@@ -34,7 +34,6 @@ imports =
    fastfetch
    floorp
    gamescope
-   gearlever
    go
    google-chrome
    goverlay
