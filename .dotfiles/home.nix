@@ -22,6 +22,7 @@ imports =
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+   amass
    bat
    bottles
    btop
