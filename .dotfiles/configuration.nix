@@ -59,6 +59,9 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+  
+  #Enable Bluetooth
+  services.blueman.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
