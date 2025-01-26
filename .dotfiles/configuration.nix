@@ -61,7 +61,27 @@
   };
   
   #Enable Bluetooth
+  hardware.bluetooth = {
+   enable = true;
+   powerOnBoot = true;
+   settings.General = {
+    experimental = true; # show battery
+    Privacy = "device";
+    JustWorksRepairing = "always";
+    Class = "0x000100";
+    FastConnectable = true;
+   };
+  };
+  
   services.blueman.enable = true;
+  hardware.xpadneo.enable = true; # Enable the xpadneo driver for Xbox BT Controller
+  
+  boot = {
+   extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
+   extraModprobeConfig = ''
+    options bluetooth disable_ertm=Y
+   '';
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
