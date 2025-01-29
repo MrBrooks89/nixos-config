@@ -48,6 +48,7 @@ imports =
    mangohud
    nautilus
    nwg-look
+   ollama-rocm
    pavucontrol
    playerctl
    protonup-ng

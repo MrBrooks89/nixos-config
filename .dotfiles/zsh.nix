@@ -7,6 +7,7 @@
     syntaxHighlighting.enable = true;
     sessionVariables = {
       PATH = "$HOME/go/bin:$PATH";
+      OLLAMA_HOST = "0.0.0.0:11434";
 #      GOBIN = "$HOME/go/bin";
 #      GOPATH = "$HOME/go/bin:$PATH";
    };
