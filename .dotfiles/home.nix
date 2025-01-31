@@ -22,6 +22,7 @@ imports =
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+   appimage-run  
    amass
    bat
    bottles
