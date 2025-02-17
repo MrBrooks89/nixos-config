@@ -55,6 +55,7 @@ imports =
    protonup-ng
    python3
    python311Packages.pip
+   p7zip
    rocmPackages.rpp
    rocmPackages.rocm-smi
    rofi-wayland
