@@ -70,6 +70,7 @@ imports =
    teams-for-linux
    unzip
    vim
+   vkbasalt
    vlc
    vscode
    waybar
