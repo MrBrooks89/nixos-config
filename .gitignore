@@ -2,7 +2,8 @@
 /*
 # do not ignore the .gitignore file
 !.gitignore
-!/etc/.dotfiles
+# do not ignore /etc/.dotfiles
+!/.dotfiles
 # do not ignore .config
 !.config
 # ignore  files and folders in the .config directory
