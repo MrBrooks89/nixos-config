@@ -154,13 +154,13 @@
     users = {  # <-- This is the correct parent key
       mrbrooks = {
         isNormalUser = true;
-        description = "mrbrooks";
+        description = "MrBrooks";
         extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
       };
 
       mrsbrooks = {
         isNormalUser = true;
-        description = "Wife's Account";
+        description = "MrsBrooks";
         home = "/home/mrsbrooks";
         extraGroups = [ "networkmanager" "audio" ];
       };
