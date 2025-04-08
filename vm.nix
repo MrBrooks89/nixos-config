@@ -9,7 +9,7 @@
 
   # Install necassary packages
   environment.systemPackages = with pkgs; [
-    #virt-manager
+    virt-manager
     virt-viewer
     spice-gtk
     spice-protocol
