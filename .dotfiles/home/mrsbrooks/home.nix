@@ -11,8 +11,8 @@ imports =
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "mrbrooks";
-  home.homeDirectory = "/home/mrbrooks";
+  home.username = "mrsbrooks";
+  home.homeDirectory = "/home/mrsbrooks";
 
 
   home.stateVersion = "24.11"; # Please read the comment before changing.
