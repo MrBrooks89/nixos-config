@@ -34,9 +34,18 @@
       mrbrooks = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./home.nix
+          ./home/mrbrooks/home.nix
           catppuccin.homeModules.catppuccin
         ];
+      };
+     
+     # Home Manager configuration for mrsbrooks
+     mrsbrooks = home-manager.lib.homeManagerConfiguration {
+       inherit pkgs;
+       modules = [
+         ./home/mrsbrooks/home.nix
+         catppuccin.homeModules.catppuccin
+       ];
       };
 
     };

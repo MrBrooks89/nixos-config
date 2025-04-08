@@ -151,13 +151,22 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
     defaultUserShell = pkgs.zsh;
-    users.mrbrooks = {
-    isNormalUser = true;
-    description = "mrbrooks";
-    extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
+    users = {  # <-- This is the correct parent key
+      mrbrooks = {
+        isNormalUser = true;
+        description = "mrbrooks";
+        extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
+      };
+
+      mrsbrooks = {
+        isNormalUser = true;
+        description = "Wife's Account";
+        home = "/home/mrsbrooks";
+        extraGroups = [ "networkmanager" "audio" ];
+      };
+    };
   };
-};
-  
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
