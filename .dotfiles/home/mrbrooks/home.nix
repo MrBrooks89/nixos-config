@@ -37,7 +37,6 @@ imports =
    floorp
    gamescope
    go
-   google-chrome
    goverlay
    grim
    hyprcursor
