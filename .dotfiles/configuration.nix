@@ -13,6 +13,8 @@
  
   networking.hostName = "nixos"; 
 
+  # Enable Docker
+  virtualisation.docker.enable = true;
   
   # Enable hyprland
   programs.hyprland = {
@@ -155,7 +157,7 @@
       mrbrooks = {
         isNormalUser = true;
         description = "MrBrooks";
-        extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" ];
+        extraGroups = [ "networkmanager" "wheel" "audio" "sharedgroup" "docker" ];
       };
 
       mrsbrooks = {
