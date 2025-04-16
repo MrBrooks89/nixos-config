@@ -51,8 +51,9 @@ imports =
    pavucontrol
    playerctl
    protonup-ng
-   python3
+   python311
    python311Packages.pip
+   python311Packages.virtualenv
    p7zip
    rocmPackages.rpp
    rocmPackages.rocm-smi
