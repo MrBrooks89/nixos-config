@@ -60,6 +60,7 @@ imports =
    rofi-wayland
    slurp
    starship
+   stdenv.cc.cc.lib
    steamtinkerlaunch
    swaybg
    swaylock-effects
