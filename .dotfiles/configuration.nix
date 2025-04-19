@@ -22,6 +22,8 @@
     xwayland.enable = true;
   };
   
+  # Fixes Electron/Wayland apps
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";  
 
   # Required to be able to use zsh as default shell
   programs.zsh.enable = true;
