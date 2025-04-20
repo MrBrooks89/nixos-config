@@ -47,6 +47,7 @@ imports =
    mangohud
    nautilus
    nwg-look
+   obs-studio
    ollama-rocm
    pavucontrol
    playerctl
