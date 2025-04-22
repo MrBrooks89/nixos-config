@@ -129,27 +129,28 @@
 };
 
   
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = true;
-  services.pulseaudio.support32Bit = true;
-  nixpkgs.config.pulseaudio = true;
-  services.pipewire.enable = lib.mkForce false;
-  security.rtkit.enable = true;
- # services.pipewire = {
- #   enable = true;
- #   alsa.enable = true;
- #   alsa.support32Bit = true;
- #   pulse.enable = true;
- # };
+  # Enable sound with pulseaudio
+  services.pulseaudio.enable = false;
+  #services.pulseaudio.support32Bit = true;
+  #nixpkgs.config.pulseaudio = true;
+  #services.pipewire.enable = lib.mkForce false;
+  #security.rtkit.enable = true;
+  # Enable Sound with pipwire
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
-#   services.pipewire.extraConfig.pipewire."92-low-latency" = {
-#     "context.properties" = {
-#       "default.clock.rate" = 48000;
-#       "default.clock.quantum" = 32;
-#       "default.clock.min-quantum" = 32;
-#       "default.clock.max-quantum" = 32;
-#     };
-#   };
+   services.pipewire.extraConfig.pipewire."92-low-latency" = {
+     "context.properties" = {
+       "default.clock.rate" = 48000;
+       "default.clock.quantum" = 32;
+       "default.clock.min-quantum" = 32;
+       "default.clock.max-quantum" = 32;
+     };
+   };
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

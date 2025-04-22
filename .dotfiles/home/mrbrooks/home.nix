@@ -63,6 +63,7 @@ imports =
    starship
    stdenv.cc.cc.lib
    steamtinkerlaunch
+   stress-ng
    swaybg
    swaylock-effects
    swappy
