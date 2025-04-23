@@ -51,6 +51,7 @@ imports =
    ollama-rocm
    pavucontrol
    playerctl
+   protontricks
    protonup-ng
    python311
    python311Packages.pip
