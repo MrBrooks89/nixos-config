@@ -21,74 +21,95 @@ imports =
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-   appimage-run  
-   amass
-   bat
-   bottles
-   btop
-   cmatrix
-   cider
-   dig
-   discord
-   dunst
-   eza
-   fastfetch
-   floorp
-   gamescope
-   adwaita-icon-theme
-   go
-   goverlay
-   grim
-   hyprcursor
-   kdePackages.kate
-   kdePackages.konsole
-   kitty
-   libnotify
-   libreoffice-qt6-fresh
-   mangohud
-   nautilus
-   nwg-look
-   obs-studio
-   ollama-rocm
-   papirus-icon-theme
-   pavucontrol
-   playerctl
-   protontricks
-   protonup-ng
-   python311
-   python311Packages.pip
-   python311Packages.virtualenv
-   python3.pkgs.xkbcommon
-   python3.pkgs.pywayland
-   wlr-protocols
-   p7zip
-   rocmPackages.rpp
-   rocmPackages.rocm-smi
-   rofi-wayland
-   slurp
-   starship
-   stdenv.cc.cc.lib
-   steamtinkerlaunch
-   stress-ng
-   swaybg
-   swaylock-effects
-   swappy
-   swww
-   tcpdump
-   teams-for-linux
-   unzip
-   vim
-   vkbasalt
-   vlc
-   vscode
-   waybar
-   wget
-   wl-clipboard
-   wireshark
-   wofi
-   wmctrl
-   xdotool
-  ];
+  # CLI Utilities
+  appimage-run
+  bat
+  bottom
+  btop
+  cmatrix
+  eza
+  fastfetch
+  fd
+  ripgrep
+  wget
+  unzip
+  tcpdump
+  dig
+  p7zip
+  stress-ng
+
+  # Development
+  go
+  python3
+  nodejs
+  stdenv.cc.cc.lib
+  wlr-protocols
+  python3.pkgs.xkbcommon
+  python3.pkgs.pywayland
+
+  # GUI Apps
+  bottles
+  cider
+  discord
+  floorp
+  nautilus
+  gnome-calculator
+  kdePackages.konsole
+  kdePackages.kate
+  libreoffice-qt6-fresh
+  obs-studio
+  vlc
+  vscode
+  wireshark
+
+  # Wayland/Hyprland
+  grim
+  hyprcursor
+  hyprpaper
+  kitty
+  rofi-wayland
+  slurp
+  swaybg
+  swaylock-effects
+  swappy
+  swww
+  waybar
+  wl-clipboard
+  wofi
+  wmctrl
+  xdotool
+
+  # Gaming
+  gamescope
+  goverlay
+  mangohud
+  protontricks
+  protonup-ng
+  steamtinkerlaunch
+  vkbasalt
+
+  # System
+  pavucontrol
+  playerctl
+  nwg-look
+  libnotify
+
+  # Security
+  amass
+  nmap
+
+  # Themes
+  adwaita-icon-theme
+  papirus-icon-theme
+
+  # ROCm
+  ollama-rocm
+  rocmPackages.rpp
+  rocmPackages.rocm-smi
+
+  # Misc
+  teams-for-linux
+];
 
   programs = {
     fzf.enable = true;
@@ -98,15 +119,15 @@ imports =
     enable = true;
     fzf = {
      enable = true;
-     flavor = "latte";
+     flavor = "mocha";
     }; 
     bat = {
      enable = true;
-     flavor = "latte";
+     flavor = "mocha";
     };
     kitty = {
      enable = true;
-     flavor = "latte";
+     flavor = "mocha";
     };
   };
 
