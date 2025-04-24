@@ -35,6 +35,7 @@ imports =
    fastfetch
    floorp
    gamescope
+   adwaita-icon-theme
    go
    goverlay
    grim
@@ -49,6 +50,7 @@ imports =
    nwg-look
    obs-studio
    ollama-rocm
+   papirus-icon-theme
    pavucontrol
    playerctl
    protontricks
@@ -107,6 +109,18 @@ imports =
      flavor = "latte";
     };
   };
+
+  gtk = {
+  enable = true;
+  theme = {
+    name = "Dracula";
+    package = pkgs.dracula-theme;
+  };
+  iconTheme = {
+    name = "Papirus-Dark";  # Match the theme's internal name
+    package = pkgs.papirus-icon-theme;
+  };
+};
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
