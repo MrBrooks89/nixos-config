@@ -56,6 +56,9 @@ imports =
    python311
    python311Packages.pip
    python311Packages.virtualenv
+   python3.pkgs.xkbcommon
+   python3.pkgs.pywayland
+   wlr-protocols
    p7zip
    rocmPackages.rpp
    rocmPackages.rocm-smi
@@ -81,6 +84,7 @@ imports =
    wl-clipboard
    wireshark
    wofi
+   wmctrl
    xdotool
   ];
 
