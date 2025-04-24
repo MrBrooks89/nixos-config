@@ -66,6 +66,7 @@ imports =
   grim
   hyprcursor
   hyprpaper
+  jq
   kitty
   rofi-wayland
   slurp
