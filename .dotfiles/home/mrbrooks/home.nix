@@ -24,7 +24,6 @@ imports =
   # CLI Utilities
   appimage-run
   bat
-  bottom
   btop
   cmatrix
   eza
@@ -37,6 +36,7 @@ imports =
   dig
   p7zip
   stress-ng
+  vim
 
   # Development
   go
@@ -64,6 +64,8 @@ imports =
 
   # Wayland/Hyprland
   grim
+  hyprlock
+  hypridle
   hyprcursor
   hyprpaper
   jq
