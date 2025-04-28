@@ -39,6 +39,7 @@ imports =
   vim
 
   # Development
+  electron
   go
   python3
   nodejs
