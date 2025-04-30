@@ -4,12 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
-
+    catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = { nixpkgs, home-manager, catppuccin, ... } @ inputs:
