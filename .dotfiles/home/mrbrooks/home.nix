@@ -29,7 +29,6 @@ imports =
   eza
   fastfetch
   fd
-  ripgrep
   wget
   unzip
   tcpdump
