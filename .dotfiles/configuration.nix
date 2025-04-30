@@ -148,7 +148,7 @@
    };
 
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user accounts
   users = {
     defaultUserShell = pkgs.zsh;
     users = {  
@@ -171,39 +171,37 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
+  # Packages needed for initial config
   environment.systemPackages = with pkgs; [
     git
     kitty
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
-
-
-];
+  ];
 
 
   # Enables fonts
   fonts.packages = with pkgs; [
-  font-awesome
-  powerline-fonts
-  powerline-symbols
-  nerd-fonts.jetbrains-mono
+    font-awesome
+    powerline-fonts
+    powerline-symbols
+    nerd-fonts.jetbrains-mono
   ];
 
   # Enables and installs steam
   programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
   # Sets steam location for Proton GE
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-      "\${HOME}/.steam/root/compatibilitytools.d";
+    environment.sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+        "\${HOME}/.steam/root/compatibilitytools.d";
   };
   
-  # Enable gamemode use gamemode %command in steam options
+  # Enable gamemode
   programs.gamemode.enable = true;
   
   # Disable IPv6
