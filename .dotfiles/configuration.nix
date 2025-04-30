@@ -88,16 +88,15 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
-   
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  services.xserver = {
+    enable = true; # Required for GDM
+    displayManager.gdm = {
+      enable = true;
+      wayland = true;
+   };
+  desktopManager.gnome.enable = false; # Disable GNOME
   };
+   
 
   # Enable CUPS to print documents.
   services.printing = {
@@ -129,12 +128,8 @@
 };
 
   
-  # Enable sound with pulseaudio
+  # Disable sound with pulseaudio
   services.pulseaudio.enable = false;
-  #services.pulseaudio.support32Bit = true;
-  #nixpkgs.config.pulseaudio = true;
-  #services.pipewire.enable = lib.mkForce false;
-  #security.rtkit.enable = true;
   # Enable Sound with pipwire
   services.pipewire = {
     enable = true;
@@ -156,7 +151,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
     defaultUserShell = pkgs.zsh;
-    users = {  # <-- This is the correct parent key
+    users = {  
       mrbrooks = {
         isNormalUser = true;
         description = "MrBrooks";
@@ -213,17 +208,6 @@
   
   # Disable IPv6
   networking.enableIPv6 = false;
-
-
-#   # Set Unsecure Algorithms for 2960x SSH connection
-#   programs.ssh.extraConfig = ''
-#     Host 192.168.4.25
-#         KexAlgorithms +diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
-#         Ciphers +aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
-#         HostKeyAlgorithms +ssh-rsa
-#         PubkeyAcceptedAlgorithms +ssh-rsa
-#   '';
-
 
 
 
