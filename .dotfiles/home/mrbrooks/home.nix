@@ -142,8 +142,12 @@ imports =
     package = pkgs.dracula-theme;
   };
   iconTheme = {
-    name = "Papirus-Dark";  # Match the theme's internal name
+    name = "Papirus-Dark";  
     package = pkgs.papirus-icon-theme;
+  };
+  cursorTheme = {
+    name = "rose-pine-cursor";
+    package = pkgs.rose-pine-cursor;
   };
 };
 
