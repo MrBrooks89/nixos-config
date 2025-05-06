@@ -118,6 +118,8 @@ imports =
     fzf.enable = true;
   };
 
+  catppuccin.mako.enable = false;
+
   catppuccin = {
     enable = true;
     fzf = {
