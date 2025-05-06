@@ -124,15 +124,15 @@ imports =
     enable = true;
     fzf = {
      enable = true;
-     flavor = "mocha";
+     flavor = "latte";
     }; 
     bat = {
      enable = true;
-     flavor = "mocha";
+     flavor = "latte";
     };
     kitty = {
      enable = true;
-     flavor = "mocha";
+     flavor = "latte";
     };
   };
 

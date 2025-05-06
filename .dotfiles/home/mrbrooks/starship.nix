@@ -6,7 +6,7 @@ catppuccin = {
   enable = true;
   starship = {
    enable = true;
-   flavor = "mocha";
+   flavor = "latte";
   };
 };
 
