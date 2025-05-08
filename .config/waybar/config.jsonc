@@ -27,10 +27,10 @@
 
 	"network": {
 		"format-wifi": " {essid} {bandwidthDownBits}↓ {bandwidthUpBits}↑",
-		"format-ethernet": "󰱔 {ipaddr}/{cidr}",
+		"format-ethernet": "Down: {bandwidthDownBits} Up: {bandwidthUpBits}",
 		"format-disconnected": "Disconnected",
 		"tooltip-format": "",
-		"tooltip-format-ethernet": "Down: {bandwidthDownBits}\nUp: {bandwidthUpBits}",
+		"tooltip-format-ethernet": "󰱔 {ipaddr}/{cidr}",
 		"tooltip-format-disconnected": ""
     },
     
