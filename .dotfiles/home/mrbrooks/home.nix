@@ -52,7 +52,7 @@ imports =
   cider
   discord
   floorp
-  jetbrains.pycharm-community-bin
+  jetbrains.pycharm-community-src
   nautilus
   gnome-calculator
   kdePackages.konsole
