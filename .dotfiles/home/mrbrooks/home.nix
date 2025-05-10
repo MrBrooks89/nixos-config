@@ -84,6 +84,7 @@ imports =
   # Gaming
   gamescope
   goverlay
+  lutris
   mangohud
   protontricks
   protonup-ng
