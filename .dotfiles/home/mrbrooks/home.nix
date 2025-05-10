@@ -84,12 +84,16 @@ imports =
   # Gaming
   gamescope
   goverlay
+  glxinfo
   lutris
   mangohud
   protontricks
   protonup-ng
   steamtinkerlaunch
+  winetricks
+  wineWowPackages.full
   vkbasalt
+  vulkan-tools
 
   # System
   pavucontrol

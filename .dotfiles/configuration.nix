@@ -27,7 +27,11 @@
 
   # Required to be able to use zsh as default shell
   programs.zsh.enable = true;
-
+   
+  # Enable 32-bit libraries and OpenGL support
+  hardware.graphics = {
+    enable = true;
+  };
 
   # Enable networking
   networking.networkmanager.enable = true;
