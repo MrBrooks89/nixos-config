@@ -52,14 +52,13 @@ imports =
   cider
   discord
   floorp
-  jetbrains.pycharm-community-src
   nautilus
   gnome-calculator
   kdePackages.konsole
-  kdePackages.kate
   libreoffice-qt6-fresh
   obs-studio
   vlc
+  vscode
   wireshark
 
   # Wayland/Hyprland
