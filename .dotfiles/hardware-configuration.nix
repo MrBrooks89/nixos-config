@@ -33,6 +33,7 @@
     { device = "/dev/disk/by-uuid/64BEB644BEB60F14"; 
       fsType = "ntfs";      
     };
+  
 
 
   swapDevices = [ ];
