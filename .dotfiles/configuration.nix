@@ -46,6 +46,7 @@
   boot.kernel.sysctl."net.ipv4.tcp_rmem" = "4096 87380 1073741824"; # 1 GiB max
   boot.kernel.sysctl."net.ipv4.tcp_wmem" = "4096 87380 1073741824"; # 1 GiB max
 
+
   
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

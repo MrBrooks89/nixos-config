@@ -85,7 +85,6 @@ imports =
   gamescope
   goverlay
   glxinfo
-  lutris
   mangohud
   protontricks
   protonup-ng
