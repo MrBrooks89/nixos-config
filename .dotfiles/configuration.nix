@@ -22,16 +22,12 @@
     xwayland.enable = true;
   };
   
+
   # Fixes Electron/Wayland apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";  
 
   # Required to be able to use zsh as default shell
   programs.zsh.enable = true;
-   
-  # Enable 32-bit libraries and OpenGL support
-  hardware.graphics = {
-    enable = true;
-  };
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -99,7 +95,7 @@
       enable = true;
       wayland = true;
    };
-  desktopManager.gnome.enable = false; # Disable GNOME
+  desktopManager.gnome.enable = true; # Disable GNOME
   };
    
 
