@@ -21,7 +21,6 @@
     enable = true;
     xwayland.enable = true;
   };
-  
 
   # Fixes Electron/Wayland apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";  
@@ -97,7 +96,6 @@
    };
   desktopManager.gnome.enable = true; # Disable GNOME
   };
-   
 
   # Enable CUPS to print documents.
   services.printing = {
@@ -176,9 +174,21 @@
   environment.systemPackages = with pkgs; [
     git
     kitty
+    lact
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
+  
 
+  # Enable LACTD Service For GPU Management with LACT
+  systemd.services.lact = {
+    description = "AMDGPU Control Daemon";
+    after = ["multi-user.target"];
+    wantedBy = ["multi-user.target"];
+    serviceConfig = {
+      ExecStart = "${pkgs.lact}/bin/lact daemon";
+    };
+    enable = true;
+  };
 
   # Enables fonts
   fonts.packages = with pkgs; [

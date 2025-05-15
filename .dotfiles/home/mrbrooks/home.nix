@@ -50,6 +50,7 @@ imports =
   # GUI Apps
   bottles
   cider
+  corectrl
   discord
   floorp
   nautilus
@@ -95,6 +96,7 @@ imports =
   vkbasalt
   vulkan-tools
 
+
   # System
   pavucontrol
   playerctl
@@ -121,8 +123,10 @@ imports =
   programs = {
     fzf.enable = true;
   };
-
+   
+  # Disable mako for catppucin
   catppuccin.mako.enable = false;
+
 
   catppuccin = {
     enable = true;
