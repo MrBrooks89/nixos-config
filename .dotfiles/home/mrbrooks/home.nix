@@ -50,7 +50,7 @@ imports =
   # GUI Apps
   bottles
   cider
-  corectrl
+  coolercontrol.coolercontrol-gui
   discord
   floorp
   nautilus
