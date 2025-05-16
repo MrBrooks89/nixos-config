@@ -179,6 +179,7 @@
   ];
   
 
+
   # Enable LACTD Service For GPU Management with LACT
   systemd.services.lact = {
     description = "AMDGPU Control Daemon";
