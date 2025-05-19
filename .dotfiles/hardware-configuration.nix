@@ -29,10 +29,10 @@
       fsType = "ext4";      
     };
 
-#  fileSystems."/mnt/Archive" = 
-#    { device = "/dev/disk/by-uuid/64BEB644BEB60F14"; 
-#      fsType = "ntfs";      
-#    };
+  fileSystems."/mnt/Archive" = 
+    { device = "/dev/disk/by-uuid/64BEB644BEB60F14"; 
+      fsType = "ntfs";      
+    };
 
 
   swapDevices = [ ];
