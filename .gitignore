@@ -1,0 +1,14 @@
+# ignore everything
+/*
+# do not ignore the .gitignore file
+!.gitignore
+# do not ignore /etc/.dotfiles
+!/.dotfiles
+# do not ignore .config
+!.config
+# ignore  files and folders in the .config directory
+/.config/*
+# do not igonre these files and folders in .config directory
+!/.config/hypr
+!/.config/kitty
+!/.config/waybar
