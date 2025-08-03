@@ -53,6 +53,7 @@ imports =
   coolercontrol.coolercontrol-gui
   discord
   floorp
+  firefox
   nautilus
   gnome-calculator
   kdePackages.konsole
