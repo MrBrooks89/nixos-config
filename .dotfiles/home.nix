@@ -84,10 +84,10 @@ imports =
 
   # Gaming
   gamescope
-  goverlay
   glxinfo
   lutris
   mangohud
+  mangojuice
   protontricks
   protonup-ng
   steamtinkerlaunch
