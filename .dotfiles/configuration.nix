@@ -87,15 +87,17 @@
    '';
   };
 
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true; # Required for GDM
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-   };
-  desktopManager.gnome.enable = true; # Disable GNOME
-  };
+# Enable the X11 windowing system.
+services.xserver = {
+  enable = true; # Required for GDM
+};
+
+services.displayManager.gdm = {
+  enable = true;
+  wayland = true;
+};
+
+services.desktopManager.gnome.enable = true; # Enable GNOME
 
   # Enable CUPS to print documents.
   services.printing = {
