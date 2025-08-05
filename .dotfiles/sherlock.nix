@@ -37,17 +37,9 @@
           name = "Weather";
           type = "Weather";
           args = {
-            location = "Longview";
+            location = "longview";
             update_interval = 60;
           };
-          actions = [
-            {
-            name = "Show in Web";
-            exec = "https://www.wttr.in/Longview";
-            icon = "sherlock-link";
-            method = "web_launcher";
-            }
-          ];
           priority = 1;
           home = "OnlyHome";
           async = true;
