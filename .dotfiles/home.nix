@@ -56,7 +56,7 @@ imports =
   floorp
   firefox
   nautilus
-  gnome-calculator
+  #gnome-calculator
   kdePackages.konsole
   libreoffice-qt6-fresh
   obs-studio

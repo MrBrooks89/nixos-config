@@ -16,13 +16,13 @@
           try_suppress_warnings = true;
         };
         default_apps = {
-          teams = "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland --url {meeting_url}";
+          teams = "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland";
           terminal = "kitty";
         };
         units = {
-            lenghts = "feet";
+            lengths = "feet";
             weights = "lb";
-            volumens = "gal";
+            volumes = "gal";
             temperatures = "F";
             currency = "usd";
         };       
@@ -37,9 +37,22 @@
           name = "Weather";
           type = "Weather";
           args = {
-            location = "Longview, TX";
+            location = "Longview";
             update_interval = 60;
           };
+          actions = [
+            {
+            name = "Show in Web";
+            exec = "https://www.wttr.in/Longview";
+            icon = "sherlock-link";
+            method = "web_launcher";
+            }
+          ];
+          priority = 1;
+          home = "OnlyHome";
+          async = true;
+          shortcut = false;
+          spawn_focus = false;
         }
         {
             name = "Calculator";
@@ -52,6 +65,7 @@
             priority = 1;
             on_return = "copy";
             };
+            
         }
       ];
 
