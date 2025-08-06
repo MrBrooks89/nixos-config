@@ -60,7 +60,6 @@ imports =
   kdePackages.konsole
   libreoffice-qt6-fresh
   obs-studio
-  thunderbird-latest-unwrapped
   vlc
   vscode
   wireshark
@@ -124,6 +123,12 @@ imports =
 
   programs = {
     fzf.enable = true;
+    thunderbird = {
+      enable = true;
+      profiles.default = {
+        isDefault = true;
+      };
+    };
   };
    
   # Disable mako for catppucin
