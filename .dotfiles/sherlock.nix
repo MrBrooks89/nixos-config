@@ -59,6 +59,40 @@
             };
             
         }
+        {
+            name = "Power Management";
+            alias = "pm";
+            type = "command";
+            args = {
+              commands = {
+                "Shutdown" = {
+                  icon = "system-shutdown";
+                  icon_class = "reactive";
+                  exec = "poweroff";
+                  search_string = "Poweroff;Shutdown";
+                };
+                "Sleep" = {
+                  icon = "system-suspend";
+                  icon_class = "reactive";
+                  exec = "suspend";
+                  search_string = "Sleep;";
+                };
+                # "Lock = {
+                #     "icon = "system-lock-screen";
+                #     "icon_class = "reactive";
+                #     "exec = "systemctl suspend & swaylock";
+                #     "search_string = "Lock Screen;"
+                # };
+                "Reboot" = {
+                  icon = "system-reboot";
+                  icon_class = "reactive";
+                  exec = "reboot";
+                  search_string = "reboot;restart";
+                };
+              };
+            };
+            priority = 5;
+          }
       ];
 
       style = null; 
