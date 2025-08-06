@@ -172,7 +172,6 @@ services.desktopManager.gnome.enable = true; # Enable GNOME
     lact
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     home-manager
-    firefox
   ];
   
 

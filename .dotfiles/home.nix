@@ -60,6 +60,7 @@ imports =
   kdePackages.konsole
   libreoffice-qt6-fresh
   obs-studio
+  thunderbird-latest-unwrapped
   vlc
   vscode
   wireshark
@@ -71,7 +72,6 @@ imports =
   hyprcursor
   hyprpaper
   jq
-  kitty
   rofi-wayland
   slurp
   swaybg
