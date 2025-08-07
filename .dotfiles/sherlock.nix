@@ -25,7 +25,7 @@
             volumes = "gal";
             temperatures = "F";
             currency = "usd";
-        };       
+        };     
       };
 
       ignore = ''
@@ -40,6 +40,14 @@
             location = "longview";
             update_interval = 60;
           };
+          actions = [
+            {
+              name = "Show in Web";
+              exec = "https://www.wttr.in/longview";
+              icon = "sherlock-link";
+              method = "web_launcher";
+            }
+          ];
           priority = 1;
           home = "OnlyHome";
           async = true;
@@ -54,10 +62,9 @@
                     "calc.math"
                     "calc.units"
                 ];
-            priority = 1;
-            on_return = "copy";
             };
-            
+            priority = 1;
+            on_return = "copy";            
         }
         {
             name = "Power Management";
@@ -69,25 +76,33 @@
                   icon = "system-shutdown";
                   icon_class = "reactive";
                   exec = "poweroff";
-                  search_string = "Poweroff;Shutdown";
+                  search_string = "shutdown";
+                  tag_start = "{keyword}";
+                  tag_end = "{keyword}";
                 };
                 "Sleep" = {
                   icon = "system-suspend";
                   icon_class = "reactive";
                   exec = "suspend";
-                  search_string = "Sleep;";
+                  search_string = "sleep";
+                  tag_start = "{keyword}";
+                  tag_end = "{keyword}";
                 };
-                # "Lock = {
-                #     "icon = "system-lock-screen";
-                #     "icon_class = "reactive";
-                #     "exec = "systemctl suspend & swaylock";
-                #     "search_string = "Lock Screen;"
-                # };
+                "Lock" = {
+                   icon = "system-lock-screen";
+                   icon_class = "reactive";
+                   exec = "hyprlock";
+                   search_string = "lock screen";
+                   tag_start = "{keyword}";
+                   tag_end = "{keyword}";
+                 };
                 "Reboot" = {
                   icon = "system-reboot";
                   icon_class = "reactive";
                   exec = "reboot";
-                  search_string = "reboot;restart";
+                  search_string = "reboot";
+                  tag_start = "{keyword}";
+                  tag_end = "{keyword}";
                 };
               };
             };
