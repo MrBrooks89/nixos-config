@@ -42,13 +42,13 @@
         }
         {
           name = "Weather";
-          type = "Weather";
+          type = "weather";
           args = {
             location = "longview";
             update_interval = 60;
           };
           priority = 1;
-          home = "Home";
+          home = "OnlyHome";
           async = true;
           shortcut = false;
           spawn_focus = false;
@@ -106,7 +106,7 @@
               };
             };
             priority = 5;
-            home = "OnlyHome";
+            home = "Home";
           }
       ];
 
