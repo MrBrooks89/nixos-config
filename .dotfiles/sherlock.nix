@@ -34,22 +34,21 @@
 
       launchers = [
         {
+          name = "App Launcher";
+          type = "app_launcher";
+          args = {};
+          priority = 1;
+          home = "Home";
+        }
+        {
           name = "Weather";
           type = "Weather";
           args = {
             location = "longview";
             update_interval = 60;
           };
-          actions = [
-            {
-              name = "Show in Web";
-              exec = "https://www.wttr.in/longview";
-              icon = "sherlock-link";
-              method = "web_launcher";
-            }
-          ];
           priority = 1;
-          home = "OnlyHome";
+          home = "Home";
           async = true;
           shortcut = false;
           spawn_focus = false;
@@ -107,6 +106,7 @@
               };
             };
             priority = 5;
+            home = "OnlyHome";
           }
       ];
 
