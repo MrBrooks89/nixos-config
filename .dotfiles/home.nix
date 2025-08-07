@@ -51,7 +51,7 @@ imports =
   # GUI Apps
   bottles
   cider
-  coolercontrol.coolercontrol-gui
+  #coolercontrol.coolercontrol-gui
   discord
   floorp
   firefox
