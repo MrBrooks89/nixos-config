@@ -30,6 +30,7 @@ imports =
   eza
   fastfetch
   fd
+  ipcalc
   wget
   unzip
   tcpdump
