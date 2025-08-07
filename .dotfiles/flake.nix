@@ -24,7 +24,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          catppuccin.nixosModules.catppuccin
         ];
       };
     };
@@ -36,7 +35,6 @@
         modules = [
           ./home.nix
           inputs.sherlock.homeManagerModules.default
-          #catppuccin.homeModules.catppuccin
         ];
       };
 

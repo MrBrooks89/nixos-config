@@ -51,12 +51,10 @@ imports =
   # GUI Apps
   bottles
   cider
-  #coolercontrol.coolercontrol-gui
   discord
   floorp
   firefox
   nautilus
-  #gnome-calculator
   kdePackages.konsole
   libreoffice-qt6-fresh
   obs-studio
@@ -108,10 +106,6 @@ imports =
   amass
   nmap
 
-  # Themes
-  #adwaita-icon-theme
-  #papirus-icon-theme
-
   # ROCm
   ollama-rocm
   rocmPackages.rpp
@@ -131,26 +125,6 @@ imports =
     };
   };
    
-  # Disable mako for catppucin
-  #catppuccin.mako.enable = false;
-
-
-  #catppuccin = {
-   # enable = true;
-   # fzf = {
-    # enable = true;
-   #  flavor = "latte";
-   # }; 
-   # bat = {
-   #  enable = true;
-    # flavor = "latte";
-   # };
-   # kitty = {
-  #   enable = true;
-   #  flavor = "latte";
-   # };
- # };
-
   gtk = {
   enable = true;
   theme = {
