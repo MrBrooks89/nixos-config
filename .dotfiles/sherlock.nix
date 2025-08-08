@@ -108,6 +108,18 @@
             priority = 5;
             home = "Home";
           }
+          {
+            name = "Web Search";
+            display_name = "Google Search";
+            tag_start = "{keyword}";
+            alias = "gg";
+            type = "web_launcher";
+            args = {
+              search_engine = "google";
+              icon = "google";
+            };
+            priority = 100;
+          }
       ];
 
       style = null; 
