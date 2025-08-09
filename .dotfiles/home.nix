@@ -51,7 +51,7 @@ imports =
 
   # GUI Apps
   bottles
-  cider
+  #cider
   discord
   floorp
   firefox
