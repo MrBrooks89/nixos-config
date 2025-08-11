@@ -40,6 +40,7 @@ imports =
   vim
 
   # Development
+  docker-compose
   electron
   go
   python3
