@@ -2,7 +2,7 @@
 
 
 {
-  programs.sherlock = {
+  programs.sherlock.settings = {
     enable = true;
 
     settings = {
@@ -123,7 +123,6 @@
           }
       ];
 
-      #style = null; 
     };
   };
 }

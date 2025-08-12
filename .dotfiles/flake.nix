@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
-    catppuccin.url = "github:catppuccin/nix";
     sherlock.url = "github:Skxxtz/sherlock";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,7 +11,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, catppuccin, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, sherlock, ... } @ inputs:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
