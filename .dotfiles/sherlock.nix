@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
 
+
 {
   programs.sherlock = {
     enable = true;
@@ -122,7 +123,7 @@
           }
       ];
 
-      style = null; 
+      #style = null; 
     };
   };
 }

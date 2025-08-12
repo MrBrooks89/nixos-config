@@ -34,7 +34,6 @@
         inherit pkgs;
         modules = [
           ./home.nix
-          inputs.sherlock.homeManagerModules.default
         ];
       };
 
