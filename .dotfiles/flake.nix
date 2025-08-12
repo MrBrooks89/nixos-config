@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, sherlock, ... } @ inputs:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -31,6 +31,7 @@
       # Home Manager configuration for mrbrooks
       mrbrooks = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
         modules = [
           ./home.nix
         ];
