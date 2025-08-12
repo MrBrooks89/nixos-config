@@ -2,7 +2,7 @@
 
 
 {
-  programs.sherlock.settings = {
+  programs.sherlock = {
     enable = true;
 
     settings = {
