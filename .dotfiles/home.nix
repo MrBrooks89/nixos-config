@@ -40,6 +40,7 @@ imports =
   vim
 
   # Development
+  bootdev-cli
   docker-compose
   electron
   go
