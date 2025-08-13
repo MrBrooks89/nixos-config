@@ -4,7 +4,7 @@
 
   programs.sherlock = {
     enable = true;
-
+    
     settings = {
       # aliases = {
       #   vesktop = { name = "Discord"; };
