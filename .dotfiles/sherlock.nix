@@ -4,6 +4,7 @@
 
   programs.sherlock = {
     enable = true;
+    runAsService = true;
     # config.toml
      settings = {
       debug = {
