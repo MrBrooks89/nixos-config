@@ -5,7 +5,7 @@
   programs.sherlock = {
     enable = true;
 
-    settings = {
+     settings = {
       debug = {
         try_suppress_warnings = true;
       };
