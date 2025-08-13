@@ -3,10 +3,10 @@
 {
 
 imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./starship.nix
       ./zsh.nix
-      ./sherlock
+      ./sherlock.nix
     ];
 
 
