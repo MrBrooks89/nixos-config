@@ -4,11 +4,8 @@
 
   programs.sherlock = {
     enable = true;
-    
+
     settings = {
-      # aliases = {
-      #   vesktop = { name = "Discord"; };
-      # };
       debug = {
         try_suppress_warnings = true;
       };
@@ -24,6 +21,15 @@
         currency = "usd";
       };    
     };
+
+    aliases = {
+        vesktop = { name = "Discord"; };
+      };
+    
+    ignore = ''
+      Avahi*
+      '';
+
         launchers = [
           {
             name = "App Launcher";
