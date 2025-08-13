@@ -82,13 +82,15 @@
     },
 
     "custom/launcher":{
-        "format": "🎗️",
-        "on-click": "rofi -show drun -show-icons",
+        "format": "❄️",
+        //"on-click": "rofi -show drun -show-icons",
+        "on-click": "sherlock",
         "on-click-right": "killall rofi"
     },
     "custom/power":{
         "format": " ",
-        "on-click": "bash ~/.config/hypr/scripts/leave.sh"
+        //"on-click": "bash ~/.config/hypr/scripts/leave.sh"
+        "on-click": "sherlock -sm pm"
     },
     "temperature": {
 	    "interval": 10,

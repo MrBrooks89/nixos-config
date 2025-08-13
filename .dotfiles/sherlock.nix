@@ -4,7 +4,7 @@
 
   programs.sherlock = {
     enable = true;
-
+    # config.toml
      settings = {
       debug = {
         try_suppress_warnings = true;
@@ -21,105 +21,105 @@
         currency = "usd";
       };    
     };
-
+    # sherlock_alias.json
     aliases = {
         vesktop = { name = "Discord"; };
-      };
-    
+    };
+    # sherlockignore
     ignore = ''
       Avahi*
       '';
-
-        launchers = [
-          {
-            name = "App Launcher";
-            alias = "app";
-            type = "app_launcher";
-            args = { };
-            priority = 1;
-            home = "Home";
-          }
-          {
-            name = "Weather";
-            type = "weather";
-            args = {
-              location = "longview";
-              update_interval = 60;
+    # fallback.json
+    launchers = [
+      {
+        name = "App Launcher";
+        alias = "app";
+        type = "app_launcher";
+        args = { };
+        priority = 1;
+        home = "Home";
+      }
+      {
+        name = "Weather";
+        type = "weather";
+        args = {
+          location = "longview";
+          update_interval = 60;
+        };
+        priority = 1;
+        home = "OnlyHome";
+        async = true;
+        shortcut = false;
+        spawn_focus = false;
+      }
+      {
+        name = "Calculator";
+        type = "calculation";
+        args = {
+          capabilities = [
+            "calc.math"
+            "calc.units"
+          ];
+        };
+        priority = 1;
+      }
+      {
+        name = "Power Management";
+        alias = "pm";
+        type = "command";
+        args = {
+          commands = {
+            "Shutdown" = {
+              icon = "system-shutdown";
+              icon_class = "reactive";
+              exec = "poweroff";
+              search_string = "shutdown";
+              tag_start = "{keyword}";
+              tag_end = "{keyword}";
             };
-            priority = 1;
-            home = "OnlyHome";
-            async = true;
-            shortcut = false;
-            spawn_focus = false;
-          }
-          {
-            name = "Calculator";
-            type = "calculation";
-            args = {
-              capabilities = [
-                "calc.math"
-                "calc.units"
-              ];
+            "Sleep" = {
+              icon = "system-suspend";
+              icon_class = "reactive";
+              exec = "suspend";
+              search_string = "sleep";
+              tag_start = "{keyword}";
+              tag_end = "{keyword}";
             };
-            priority = 1;
-          }
-          {
-            name = "Power Management";
-            alias = "pm";
-            type = "command";
-            args = {
-              commands = {
-                "Shutdown" = {
-                  icon = "system-shutdown";
-                  icon_class = "reactive";
-                  exec = "poweroff";
-                  search_string = "shutdown";
-                  tag_start = "{keyword}";
-                  tag_end = "{keyword}";
-                };
-                "Sleep" = {
-                  icon = "system-suspend";
-                  icon_class = "reactive";
-                  exec = "suspend";
-                  search_string = "sleep";
-                  tag_start = "{keyword}";
-                  tag_end = "{keyword}";
-                };
-                "Lock" = {
-                  icon = "system-lock-screen";
-                  icon_class = "reactive";
-                  exec = "hyprlock";
-                  search_string = "lock screen";
-                  tag_start = "{keyword}";
-                  tag_end = "{keyword}";
-                };
-                "Reboot" = {
-                  icon = "system-reboot";
-                  icon_class = "reactive";
-                  exec = "reboot";
-                  search_string = "reboot";
-                  tag_start = "{keyword}";
-                  tag_end = "{keyword}";
-                };
-              };
+            "Lock" = {
+              icon = "system-lock-screen";
+              icon_class = "reactive";
+              exec = "hyprlock";
+              search_string = "lock screen";
+              tag_start = "{keyword}";
+              tag_end = "{keyword}";
             };
-            priority = 5;
-            home = "Home";
-          }
-          {
-            name = "Web Search";
-            display_name = "Google Search";
-            tag_start = "{keyword}";
-            tag_end = "{keyword}";
-            alias = "gg";
-            type = "web_launcher";
-            args = {
-              search_engine = "google";
-              icon = "google";
+            "Reboot" = {
+              icon = "system-reboot";
+              icon_class = "reactive";
+              exec = "reboot";
+              search_string = "reboot";
+              tag_start = "{keyword}";
+              tag_end = "{keyword}";
             };
-            priority = 100;
-          }
-        ];     
+          };
+        };
+        priority = 5;
+        home = "Home";
+      }
+      {
+        name = "Web Search";
+        display_name = "Google Search";
+        tag_start = "{keyword}";
+        tag_end = "{keyword}";
+        alias = "gg";
+        type = "web_launcher";
+        args = {
+          search_engine = "google";
+          icon = "google";
+        };
+        priority = 100;
+      }
+    ];     
     };
     
 }
