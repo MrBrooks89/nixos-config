@@ -173,7 +173,6 @@ services.desktopManager.gnome.enable = true; # Enable GNOME
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     home-manager
   ];
-  
 
 
   # Enable LACTD Service For GPU Management with LACT
