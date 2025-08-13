@@ -84,8 +84,7 @@
     "custom/launcher":{
         "format": "❄️",
         //"on-click": "rofi -show drun -show-icons",
-        "on-click": "sherlock",
-        "on-click-right": "killall rofi"
+        "on-click": "sherlock"
     },
     "custom/power":{
         "format": " ",
