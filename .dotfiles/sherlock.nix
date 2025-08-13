@@ -6,30 +6,23 @@
     enable = true;
 
     settings = {
-      aliases = {
-        vesktop = { name = "Discord"; };
+      # aliases = {
+      #   vesktop = { name = "Discord"; };
+      # };
+      debug = {
+        try_suppress_warnings = true;
       };
-
-      config = {
-        debug = {
-          try_suppress_warnings = true;
-        };
-        default_apps = {
-          teams = "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland";
-          terminal = "kitty";
-        };
-        units = {
-          lengths = "feet";
-          weights = "lb";
-          volumes = "gal";
-          temperatures = "F";
-          currency = "usd";
-        };
+      default_apps = {
+        teams = "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland";
+        terminal = "kitty";
       };
-
-      ignore = ''
-        Avahi*
-      '';
+      units = {
+        lengths = "feet";
+        weights = "lb";
+        volumes = "gal";
+        temperatures = "F";
+        currency = "usd";
+      };    
     };
         launchers = [
           {
@@ -122,4 +115,5 @@
           }
         ];     
     };
+    
 }
