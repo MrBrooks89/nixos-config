@@ -45,9 +45,11 @@ imports =
   docker-compose
   electron
   go
+  gcc
   python3
   nodejs
   stdenv.cc.cc.lib
+  ripgrep
   wlr-protocols
   python3.pkgs.xkbcommon
   python3.pkgs.pywayland
