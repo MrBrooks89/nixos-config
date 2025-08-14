@@ -9,7 +9,6 @@
         viAlias = false;
         vimAlias = true;
         lsp.enable = true;
-        git.enable = true;
 
         languages = {
           enableFormat = true;
@@ -28,6 +27,9 @@
         telescope.enable = true;
         treesitter.enable = true;
         utility.motion.leap.enable = true;
+        autopairs.nvim-autopairs.enable = true;
+        snippets.luasnip.enable = true;
+        projects.project-nvim.enable = true;
 
         keymaps = [
           {
@@ -38,6 +40,37 @@
             noremap = true;
           }
         ];
+        
+        spellcheck = {
+          enable = true;
+        };
+      
+        binds = {
+          whichKey.enable = true;
+          cheatsheet.enable = true;
+        };
+
+        git = {
+          enable = true;
+          gitsigns.enable = true;
+          gitsigns.codeActions.enable = false;
+          neogit.enable = true;
+        };
+
+        terminal = {
+          toggleterm = {
+            enable = true;
+            lazygit.enable = true;
+         };
+        };
+
+        ui = {
+          borders.enable = true;
+          noice.enable = true;
+          colorizer.enable = true;
+          modes-nvim.enable = true;
+          illuminate.enable = true;
+        };
       };
     };
   };
