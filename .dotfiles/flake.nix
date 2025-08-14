@@ -11,13 +11,17 @@
       url = "github:Skxxtz/sherlock";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, nvf, ... } @ inputs:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -40,6 +44,7 @@
         extraSpecialArgs = { inherit inputs; };
         modules = [
           ./home.nix
+          nvf.homeManagerModules.default
         ];
       };
     };
