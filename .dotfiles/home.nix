@@ -7,6 +7,7 @@ imports =
       ./starship.nix
       ./zsh.nix
       ./sherlock.nix
+      ./nvf-config.nix
     ];
 
 
