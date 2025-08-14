@@ -28,7 +28,18 @@
         telescope.enable = true;
         treesitter.enable = true;
         utility.motion.leap.enable = true;
+
+        keymaps = [
+          {
+            key = "jj";
+            mode = "i";
+            action = "<Esc>";
+            silent = true;
+            noremap = true;
+          }
+        ];
       };
     };
   };
 }
+
