@@ -177,6 +177,7 @@
                                                 img-clip.enable = true;
                                         };
                                 };
+
                         };
                 };
         };
