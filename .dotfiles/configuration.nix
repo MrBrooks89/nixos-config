@@ -171,7 +171,6 @@
                 kitty
                 lact
                 inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
-                home-manager
         ];
 
 
