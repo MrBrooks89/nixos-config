@@ -27,6 +27,7 @@
                                 autopairs.nvim-autopairs.enable = true;
                                 snippets.luasnip.enable = true;
                                 projects.project-nvim.enable = true;
+                                options.wrap = false;
 
                                 keymaps = [
                                         {

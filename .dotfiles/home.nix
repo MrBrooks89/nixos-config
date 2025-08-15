@@ -28,6 +28,9 @@
                 bat
                 btop
                 cmatrix
+                viu
+                chafa
+                ueberzugpp
                 eza
                 fastfetch
                 fd
@@ -53,6 +56,7 @@
                 wlr-protocols
                 python3.pkgs.xkbcommon
                 python3.pkgs.pywayland
+                lua51Packages.jsregexp
 
                 # GUI Apps
                 bottles
