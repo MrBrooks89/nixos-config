@@ -6,18 +6,20 @@
                 autosuggestion.enable = true;
                 syntaxHighlighting.enable = true;
                 sessionVariables = {
+                        PATH = "$HOME/go/bin:$PATH";
                         OLLAMA_HOST = "0.0.0.0:11434";
                 };
 
-                sessionPath = [ "$HOME/go/bin"];
-
                 # Use initContent to source environment variables from the .env file 
-                initContent = ''
-      if [ -f "$HOME/.env" ]; then
-        export $(cat $HOME/.env | xargs)
-      fi
-                '';
-
+                        initContent = ''
+          if [ -f "$HOME/.env" ]; then
+            while IFS= read -r line; do
+              if [[ -n "$line" && "$line" != \#* ]]; then
+                export "$line"
+              fi
+            done < "$HOME/.env"
+          fi
+        '';
                 plugins = [
                         {
                                 name = "zsh-autopair";
