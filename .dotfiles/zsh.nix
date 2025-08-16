@@ -10,7 +10,7 @@
                         OLLAMA_HOST = "0.0.0.0:11434";
                 };
 
-                # Use initContent to source environment variables from the .env file Testing for Michael
+                # Use initContent to source environment variables from the .env file 
                 initContent = ''
       if [ -f "$HOME/.env" ]; then
         export $(cat $HOME/.env | xargs)
