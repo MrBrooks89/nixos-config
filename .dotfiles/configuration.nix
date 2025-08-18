@@ -60,6 +60,8 @@
 
         # Enable automatic loading of AMD CPU microcode updates
         hardware.cpu.amd.updateMicrocode = true;
+        # Enable firmware upgrades
+        services.fwupd.enable = true;
 
         # Enable trim fro SSDs
         services.fstrim = {
