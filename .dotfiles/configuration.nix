@@ -58,7 +58,8 @@
         # Enable automatic deduplication of the Nix store
         nix.settings.auto-optimise-store = true;
 
-
+        # Enable automatic loading of AMD CPU microcode updates
+        hardware.cpu.amd.updateMicrocode = true;
 
 
         # Enable Flakes
