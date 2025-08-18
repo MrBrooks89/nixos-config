@@ -55,8 +55,11 @@
                 dates = "Mon 15:15";
         };
 
-        # Enable automatic deduplication of the Nix store
-        nix.settings.auto-optimise-store = true;
+        # Nix Settings
+        nix.settings = {
+                auto-optimise-store = true; # automatic deduplication of the nix store
+                download-buffer-size = 33554432; # increase buffer size 32MiB for 1Gb internet
+        };
 
         # Enable automatic loading of AMD CPU microcode updates
         hardware.cpu.amd.updateMicrocode = true;
