@@ -45,14 +45,14 @@
         # Enable automatic garbage collection
         nix.gc = {
                 automatic = true;
-                dates = "Mon 15:30";
+                dates = "Mon 15:00";
                 options = "--delete-older-than 20d";
         };
 
         # Enable automatic storage optimization
         nix.optimise = {
                 automatic = true;
-                dates = "Mon 15:30";
+                dates = "Mon 15:15";
         };
 
         # Enable automatic deduplication of the Nix store
@@ -60,6 +60,12 @@
 
         # Enable automatic loading of AMD CPU microcode updates
         hardware.cpu.amd.updateMicrocode = true;
+
+        # Enable trim fro SSDs
+        services.fstrim = {
+                enable = true;
+                interval = "Mon 15:30";
+        };
 
 
         # Enable Flakes
