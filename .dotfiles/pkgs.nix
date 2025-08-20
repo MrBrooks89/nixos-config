@@ -47,7 +47,7 @@ with pkgs; [
         libreoffice-qt6-fresh
         obs-studio
         vlc
-        vscode
+        vscodium
         wireshark
 
         # Wayland/Hyprland
