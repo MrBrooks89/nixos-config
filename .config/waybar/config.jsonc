@@ -1,8 +1,14 @@
 {
 	"layer": "top",
+<<<<<<< HEAD
 	"modules-left": ["custom/launcher","cpu","memory","temperature","tray"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["pulseaudio","network","clock","custom/power"],
+=======
+	"modules-left": ["custom/launcher","cpu","memory","temperature"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["tray","pulseaudio","clock","custom/power"],
+>>>>>>> 296d4ef (modifed sherlock)
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -46,6 +52,7 @@
         "on-scroll-up": "light -A 5",
 		"on-scroll-down": "light -U 5"
 	},
+<<<<<<< HEAD
     "battery": {
         "states": {
             "good": 95,
@@ -59,6 +66,9 @@
         "format-icons": ["", "", "", "", ""]
     },
 	"tray":{
+=======
+    	"tray":{
+>>>>>>> 296d4ef (modifed sherlock)
 		"icon-size":18,
 		"spacing": 10
 	},
@@ -83,12 +93,18 @@
 
     "custom/launcher":{
         "format": "❄️",
+<<<<<<< HEAD
         //"on-click": "rofi -show drun -show-icons",
+=======
+>>>>>>> 296d4ef (modifed sherlock)
         "on-click": "sherlock"
     },
     "custom/power":{
         "format": " ",
+<<<<<<< HEAD
         //"on-click": "bash ~/.config/hypr/scripts/leave.sh"
+=======
+>>>>>>> 296d4ef (modifed sherlock)
         "on-click": "sherlock -sm pm"
     },
     "temperature": {

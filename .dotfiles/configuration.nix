@@ -201,6 +201,10 @@
                 kitty
                 lact
                 inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+<<<<<<< HEAD
+=======
+                home-manager
+>>>>>>> 296d4ef (modifed sherlock)
         ];
 
 

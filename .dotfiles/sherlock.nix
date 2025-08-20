@@ -108,6 +108,7 @@
                         }
                         {
                                 name = "Web Search";
+<<<<<<< HEAD
                                 display_name = "Google Search";
                                 tag_start = "{keyword}";
                                 tag_end = "{keyword}";
@@ -116,6 +117,16 @@
                                 args = {
                                         search_engine = "google";
                                         icon = "google";
+=======
+                                display_name = "DuckDuckGo";
+                                tag_start = "{keyword}";
+                                tag_end = "{keyword}";
+                                alias = "ddg";
+                                type = "web_launcher";
+                                args = {
+                                        search_engine = "duckduckgo";
+                                        icon = "duckduckgo";
+>>>>>>> 296d4ef (modifed sherlock)
                                 };
                                 priority = 100;
                         }
