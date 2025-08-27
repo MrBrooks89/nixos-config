@@ -13,33 +13,25 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-<<<<<<< HEAD
-    { device = "/dev/disk/by-uuid/57f46c85-bed1-42f4-b3bc-a32803366c5d";
-=======
-    { device = "/dev/disk/by-uuid/b992dfc1-6f32-4d43-84eb-cd8fddc1d72e";
->>>>>>> 296d4ef (modifed sherlock)
+  fileSystems."/" = { 
+    device = "/dev/disk/by-uuid/b992dfc1-6f32-4d43-84eb-cd8fddc1d72e";
       fsType = "ext4";
     };
 
-  fileSystems."/boot" =
-<<<<<<< HEAD
-    { device = "/dev/disk/by-uuid/8E3E-04A3";
-=======
-    { device = "/dev/disk/by-uuid/03A9-EC76";
->>>>>>> 296d4ef (modifed sherlock)
-      fsType = "vfat";
+  fileSystems."/boot" = { 
+    device = "/dev/disk/by-uuid/03A9-EC76";
+    fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
     
-     fileSystems."/mnt/Stuff" = 
-    { device = "/dev/disk/by-uuid/f145babb-6ad2-4311-addd-00b5d2e8724d"; 
+     fileSystems."/mnt/Stuff" = { 
+      device = "/dev/disk/by-uuid/f145babb-6ad2-4311-addd-00b5d2e8724d"; 
       fsType = "ext4";      
     };
 
-  fileSystems."/mnt/Archive" = 
-    { device = "/dev/disk/by-uuid/64BEB644BEB60F14"; 
-      fsType = "ntfs";      
+  fileSystems."/mnt/Archive" = { 
+    device = "/dev/disk/by-uuid/64BEB644BEB60F14"; 
+    fsType = "ntfs";      
     };
 
 
