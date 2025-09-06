@@ -203,6 +203,8 @@
                 lact
                 inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
                 home-manager
+                gnome-tweaks
+                gnome-extension-manager
         ];
 
 

@@ -38,7 +38,7 @@ with pkgs; [
 
         # GUI Apps
         bottles
-        #cider
+        cider
         discord
         floorp
         firefox
