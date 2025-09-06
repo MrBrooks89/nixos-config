@@ -14,7 +14,6 @@
 
         networking.hostName = "nixos"; 
 
-        # Testing
 
         # Enable Docker
         virtualisation.docker.enable = true;
