@@ -49,6 +49,7 @@ with pkgs; [
         discord
         floorp
         firefox
+        cider-2
         freerdp
         nautilus
         kdePackages.konsole
