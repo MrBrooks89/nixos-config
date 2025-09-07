@@ -27,6 +27,14 @@ with pkgs; [
         electron
         go
         gcc
+        gnomeExtensions.arcmenu
+        gnomeExtensions.dash-to-dock
+        gnomeExtensions.weather-oclock
+        gnomeExtensions.blur-my-shell
+        gnomeExtensions.just-perfection
+        gnomeExtensions.extension-list
+        gnomeExtensions.open-bar
+        gnomeExtensions.appindicator
         python3
         nodejs
         stdenv.cc.cc.lib
