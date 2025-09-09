@@ -3,6 +3,7 @@
 
         inputs = {
                 nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+                chaotic.url ="github:chaotic-cx/nyx/nyxpkgs-unstable";
                 #rose-pine-hyprcursor = {
                 #        url = "github:ndom91/rose-pine-hyprcursor";
                 #        inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +22,7 @@
                 };
         };
 
-        outputs = { nixpkgs, home-manager, nvf, ... } @ inputs:
+        outputs = { nixpkgs, home-manager, nvf, chaotic, ... } @ inputs:
                 let
                         lib = nixpkgs.lib;
                         system = "x86_64-linux";
@@ -33,6 +34,9 @@
                                         specialArgs = { inherit inputs; };
                                         modules = [
                                                 ./configuration.nix
+                                                chaotic.nixosModules.nyx-cache
+                                                chaotic.nixosModules.nyx-overlay
+                                                chaotic.nixosModules.nyx-registry
                                         ];
                                 };
                         };
