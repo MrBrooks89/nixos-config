@@ -33,7 +33,7 @@
 		defaultEditor = true;
 	};
 
-# Enable nix-ld-rs to run non-nix executables
+# Enable nix-ld-rs to run non-nix executables | Needed for Neovim Plugins
 programs.nix-ld = {
     enable = true;
     package = pkgs.nix-ld-rs;
@@ -142,7 +142,7 @@ programs.nix-ld = {
                 wayland = true;
         };
 
-        services.desktopManager.gnome.enable = true; # Enable GNOME
+        services.desktopManager.gnome.enable = false; # Enable GNOME
 
         # Enable CUPS to print documents.
         services.printing = {
