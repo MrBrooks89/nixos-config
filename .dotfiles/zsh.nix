@@ -8,6 +8,7 @@
                 sessionVariables = {
                         PATH = "$HOME/go/bin:$PATH";
                         OLLAMA_HOST = "0.0.0.0:11434";
+                        DISPLAY = ":0";
                 };
 
                 # Use initContent to source environment variables from the .env file 

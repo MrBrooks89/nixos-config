@@ -59,14 +59,16 @@ with pkgs; [
         wireshark
 
 
-        # Wayland/Hyprland
+        # Wayland/Hyprland/Niri
         grim
         hyprlock
         hypridle
         hyprcursor
         hyprpaper
         jq
+        mako
         rofi-wayland
+        satty
         slurp
         swaybg
         swaylock-effects
@@ -77,6 +79,7 @@ with pkgs; [
         wofi
         wmctrl
         xdotool
+        xwayland-satellite
 
         # Gaming
         gamescope
