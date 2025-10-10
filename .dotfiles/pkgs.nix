@@ -2,6 +2,7 @@
 
 with pkgs; [
         # CLI Utilities
+        alacritty
         appimage-run
         bat
         btop

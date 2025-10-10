@@ -7,7 +7,7 @@
                         ./starship.nix
                         ./zsh.nix
                         ./sherlock.nix
-                        ./nvf-config.nix
+                        #./nvf-config.nix
                 ];
 
 

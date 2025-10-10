@@ -37,6 +37,8 @@
                         "ll" = "exa -al --icons";
                         "ls" = "exa -a --icons";
                         "lt" = "exa -a --tree --level=1 --icons";
+                        "nn" = "nvim";
+                        "vim" = "nvim";
                 };
         };
 }

@@ -10,20 +10,34 @@
         boot.loader.systemd-boot.enable = true;
         boot.loader.efi.canTouchEfiVariables = true;
         boot.loader.systemd-boot.configurationLimit = 10;
-        boot.kernelPackages = pkgs.linuxPackages_cachyos;
+        boot.kernelPackages = pkgs.linuxPackages_latest;
 
         networking.hostName = "nixos"; 
 
 
         # Enable Docker
         virtualisation.docker.enable = true;
-
+	# Enable Niri
+	programs.niri = {
+		enable = true;
+	};
         # Enable hyprland
         programs.hyprland = {
                 enable = true;
                 xwayland.enable = true;
         };
 
+	# Enable Neovim
+	programs.neovim = {
+		enable = true;
+		defaultEditor = true;
+	};
+
+# Enable nix-ld-rs to run non-nix executables
+programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs;
+  };
         # Fixes Electron/Wayland apps
         environment.sessionVariables.NIXOS_OZONE_WL = "1";  
 
