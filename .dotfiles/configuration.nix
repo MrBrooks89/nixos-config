@@ -214,7 +214,6 @@ programs.nix-ld = {
         environment.systemPackages = with pkgs; [
                 git
                 kitty
-                alacritty
                 lact
                 home-manager
                 gnome-tweaks
