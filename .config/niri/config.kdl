@@ -114,7 +114,7 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
-spawn-at-startup "/home/mrbrooks/.config/niri/swww_daemon_start.sh"
+spawn-sh-at-startup "/home/mrbrooks/.config/niri/swww_daemon_start.sh"
 spawn-at-startup "xwayland-satellite"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -226,7 +226,7 @@ window-rule {
 binds {
     // Show keybinds
     Mod+K { show-hotkey-overlay; }
-    Mod+N { spawn "~/.config/niri/notes.sh"; }
+    Mod+N { spawn-sh "kitty nvim -e ~/Documents/Notes/"; }
     Mod+B hotkey-overlay-title="Open Browser: Firefox" {spawn "firefox";}
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
@@ -241,8 +241,8 @@ binds {
     // For example, this is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    F5 { spawn "~/.config/niri/play-pause.sh"; }
-    F6 { spawn "~/.config/niri/play-next.sh"; }
+    F5 { spawn-sh "playerctl play-pause"; }
+    F6 { spawn-sh  "playerctl next"; }
 
     // View all workspaces
     Mod+O repeat=false { toggle-overview; }
@@ -291,7 +291,7 @@ binds {
     Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
     // Power Menu Using Sherlock  
-    Mod+P { spawn "~/.config/niri/sherlock_pm.sh"; }
+    Mod+P { spawn-sh "sherlock -sm pm"; }
 
 
     // Binds to move workspaces
@@ -386,7 +386,7 @@ binds {
 
     // Screenshot
     Print { screenshot; }
-    Mod+S hotkey-overlay-title="Screenshot with grim + slurp" {spawn "~/.config/niri/screenshot.sh";}
+    Mod+S hotkey-overlay-title="Screenshot with grim + slurp" {spawn-sh "~/.config/niri/screenshot.sh";}
 
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }

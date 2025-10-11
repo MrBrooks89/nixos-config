@@ -37,6 +37,8 @@ with pkgs; [
         gnomeExtensions.appindicator
         python3
         nodejs
+        lua
+        luarocks-nix
         stdenv.cc.cc.lib
         ripgrep
         wlr-protocols
