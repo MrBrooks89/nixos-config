@@ -24,6 +24,7 @@ with pkgs; [
         # Development
         bootdev-cli
         docker-compose
+        ueberzugpp
         electron
         go
         gcc
