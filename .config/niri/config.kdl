@@ -227,7 +227,7 @@ binds {
     // Show keybinds
     Mod+K { show-hotkey-overlay; }
     // Open notes in nvim
-    Mod+N { spawn-sh "kitty nvim -e ~/Documents/Notes/"; }
+    Mod+N { spawn-sh "kitty nvim ~/Documents/Notes/"; }
     // Open Browser
     Mod+B hotkey-overlay-title="Open Browser: Firefox" {spawn "firefox";}
     // Open Music player Cider
