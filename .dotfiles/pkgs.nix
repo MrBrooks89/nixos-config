@@ -13,6 +13,7 @@ with pkgs; [
         fastfetch
         fd
         ipcalc
+        lazygit
         wget
         unzip
         tcpdump
