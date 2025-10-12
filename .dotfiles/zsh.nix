@@ -21,6 +21,10 @@
             done < "$HOME/.env"
           fi
         '';
+
+        initExtra = ''
+          bindkey '^F' autosuggest-accept
+        '';
                 plugins = [
                         {
                                 name = "zsh-autopair";

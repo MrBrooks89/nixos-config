@@ -56,4 +56,7 @@
         programs.yazi = {
           enable = true;
         };
+        programs.helix = {
+          enable = true;
+        };
 }
