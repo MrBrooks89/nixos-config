@@ -42,6 +42,7 @@ with pkgs; [
         lua
         luarocks-nix
         stdenv.cc.cc.lib
+        sshfs
         ripgrep
         wlr-protocols
         python3.pkgs.xkbcommon
