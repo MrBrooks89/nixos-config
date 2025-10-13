@@ -5,13 +5,17 @@
   imports =
     [ 
     ./starship.nix
-      ./zsh.nix
-      ./sherlock.nix
+    ./zsh.nix
+    ./sherlock.nix
+    ./nvf-config.nix
     ];
 
 
-# Home Manager needs a bit of information about you and the paths it should
-# manage.
+  xdg.configFile."kitty" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/kitty";
+      recursive = true;
+    };
+
   home.username = "mrbrooks";
   home.homeDirectory = "/home/mrbrooks";
 

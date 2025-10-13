@@ -43,11 +43,11 @@ services.displayManager.gdm = {
 #   };
 
 # Enable Neovim
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  # };
+  #
 # Enable nix-ld-rs to run non-nix executables | Needed for Neovim Plugins
 programs.nix-ld = {
     enable = true;

@@ -40,6 +40,8 @@ with pkgs; [
         gnomeExtensions.appindicator
         python3
         nodejs
+        nil
+        nixpkgs-fmt
         lua
         luarocks-nix
         stdenv.cc.cc.lib
