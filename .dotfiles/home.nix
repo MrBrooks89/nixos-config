@@ -1,36 +1,48 @@
-{ config, pkgs, inputs, lib, ... }:
-
 {
-
-  imports =
-    [ 
+  config,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: {
+  imports = [
     ./starship.nix
     ./zsh.nix
     ./sherlock.nix
     ./nvf-config.nix
-    ];
-
+  ];
 
   xdg.configFile."kitty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/kitty";
-      recursive = true;
-    };
+    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/kitty";
+    recursive = true;
+  };
 
+  xdg.configFile."niri" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/niri";
+    recursive = true;
+  };
+
+  xdg.configFile."waybar" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/waybar";
+    recursive = true;
+  };
+
+  xdg.configFile."yazi" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/yazi";
+    recursive = true;
+  };
   home.username = "mrbrooks";
   home.homeDirectory = "/home/mrbrooks";
 
-
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
+  nixpkgs.config.allowUnfree = true;
 
-    nixpkgs.config.allowUnfree = true;
-
-  home.packages = import ./pkgs.nix { inherit pkgs; };
+  home.packages = import ./pkgs.nix {inherit pkgs;};
 
   programs = {
     fzf.enable = true;
   };
-
 
   gtk = {
     enable = true;
@@ -39,7 +51,7 @@
       package = pkgs.dracula-theme;
     };
     iconTheme = lib.mkDefault {
-      name = "Papirus-Dark";  
+      name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
     cursorTheme = {
@@ -48,7 +60,7 @@
     };
   };
 
-# Let Home Manager install and manage itself.
+  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   programs.yazi = {

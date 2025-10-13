@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on = "y"
+run = [ "yank", 'plugin clipboard -- --action=copy']
+
