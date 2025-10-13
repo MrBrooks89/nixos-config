@@ -11,6 +11,7 @@ with pkgs; [
         ueberzugpp
         eza
         fastfetch
+        file-roller
         fd
         ipcalc
         lazygit
