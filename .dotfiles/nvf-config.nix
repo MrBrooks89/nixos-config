@@ -7,7 +7,7 @@
     enable = true;
     settings = {
       vim = {
-        viAlias = false;
+        viAlias = true;
         vimAlias = true;
         lsp = {
           enable = true;
@@ -16,9 +16,6 @@
           lightbulb.enable = true;
           lspsaga.enable = false;
           trouble.enable = true;
-          lspSignature.enable = true;
-          otter-nvim.enable = true;
-          nvim-docs-view.enable = true;
         };
 
         languages = {
@@ -37,8 +34,6 @@
         treesitter.context.enable = true;
         autopairs.nvim-autopairs.enable = true;
         snippets.luasnip.enable = true;
-        projects.project-nvim.enable = true;
-        options.wrap = false;
 
         keymaps = [
           {
@@ -118,18 +113,12 @@
           transparent = false;
         };
 
-        autocomplete = {
-          nvim-cmp.enable = true;
-          blink-cmp.enable = false;
-        };
-
         tabline = {
           nvimBufferline.enable = true;
         };
 
         minimap = {
           minimap-vim.enable = false;
-          codewindow.enable = true;
         };
 
         dashboard = {
@@ -145,7 +134,6 @@
           obsidian.enable = false;
           neorg.enable = false;
           orgmode.enable = false;
-          mind-nvim.enable = true;
           todo-comments.enable = true;
         };
 
@@ -168,11 +156,9 @@
         assistant = {
           chatgpt.enable = false;
           copilot = {
-            enable = false;
-            cmp.enable = true;
+            enable = true;
           };
           codecompanion-nvim.enable = false;
-          avante-nvim.enable = true;
         };
 
         utility = {
@@ -180,22 +166,13 @@
           vim-wakatime.enable = false;
           diffview-nvim.enable = true;
           yanky-nvim.enable = false;
-          icon-picker.enable = true;
-          surround.enable = true;
-          leetcode-nvim.enable = true;
-          multicursors.enable = true;
-          smart-splits.enable = true;
-          undotree.enable = true;
-          nvim-biscuits.enable = true;
 
           motion = {
             hop.enable = true;
             leap.enable = true;
-            precognition.enable = true;
           };
           images = {
             image-nvim.enable = false;
-            img-clip.enable = true;
           };
         };
       };
