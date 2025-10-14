@@ -10,8 +10,3 @@
 /.config/*
 # do not igonre these files and folders in .config directory
 !/.config/hypr
-!/.config/kitty
-!/.config/waybar
-!/.config/niri
-!/.config/nvim
-!/.config/lazygit
