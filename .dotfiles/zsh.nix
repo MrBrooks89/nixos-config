@@ -44,8 +44,6 @@
           fi
         done < "$HOME/.env"
       fi
-
-      bind '^F' autosuggestion-accept
     '';
   };
 }

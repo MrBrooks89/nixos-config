@@ -26,6 +26,7 @@
           python.enable = true;
           bash.enable = true;
           go.enable = true;
+          rust.enable = true;
         };
 
         filetree.neo-tree.enable = true;
