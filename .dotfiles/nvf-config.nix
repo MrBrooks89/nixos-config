@@ -44,6 +44,13 @@
             silent = true;
             noremap = true;
           }
+          {
+            key = "y";
+            mode = "v";
+            action = "\"+y";
+            noremap = true;
+            silent = true;
+          }
         ];
 
         spellcheck = {
@@ -158,8 +165,14 @@
           chatgpt.enable = false;
           copilot = {
             enable = true;
+            cmp.enable = true;
           };
           codecompanion-nvim.enable = false;
+        };
+
+        autocomplete = {
+          nvim-cmp.enable = false;
+          blink-cmp.enable = true;
         };
 
         utility = {
