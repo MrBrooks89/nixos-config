@@ -31,6 +31,12 @@
     source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/yazi";
     recursive = true;
   };
+
+  xdg.configFile."mako" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/mako";
+    recursive = true;
+  };
+
   home.username = "mrbrooks";
   home.homeDirectory = "/home/mrbrooks";
 

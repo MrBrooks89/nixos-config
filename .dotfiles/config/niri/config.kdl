@@ -232,7 +232,11 @@ binds {
     Mod+B hotkey-overlay-title="Open Browser: Firefox" {spawn "firefox";}
     // Open Music player Cider
     Mod+M hotkey-overlay-title="Open Music Player: Cider" {spawn-sh "appimage-run ~/Documents/cider-v3.1.2-linux-x64.AppImage";}
-
+    // Open Teams for Linux in XWayland
+    Mod+T {spawn-sh "env NIXOS_OZONE_WL=0 teams-for-linux"; }
+    // Open Mako History
+    Mod+H { spawn-sh "~/.config/niri/mako_history.sh"; }
+    
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
