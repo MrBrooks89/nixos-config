@@ -18,6 +18,13 @@
           trouble.enable = true;
         };
 
+        highlight = {
+          Visual = {
+            bg = "#44475a";
+            fg = "NONE";
+          };
+        };
+
         languages = {
           enableFormat = true;
           enableTreesitter = true;
@@ -110,14 +117,14 @@
         statusline = {
           lualine = {
             enable = true;
-            theme = "catppuccin";
+            theme = "dracula";
           };
         };
 
         theme = {
           enable = true;
-          name = "catppuccin";
-          style = "mocha";
+          name = "dracula";
+          style = "night";
           transparent = false;
         };
 
@@ -127,6 +134,7 @@
 
         minimap = {
           minimap-vim.enable = false;
+          codewindow.enable = true;
         };
 
         dashboard = {
