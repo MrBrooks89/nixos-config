@@ -58,6 +58,13 @@
             noremap = true;
             silent = true;
           }
+          {
+            key = "<leader>H";
+            mode = "n";
+            action = ":let bar = repeat('#', 60) | call append(line('.') - 1, bar) | call append(line('.'), bar)<CR>";
+            noremap = true;
+            silent = true;
+          }
         ];
 
         spellcheck = {
