@@ -10,7 +10,7 @@ with pkgs; [
   ueberzugpp
   eza
   fastfetch
-  file-roller
+  # file-roller
   fd
   ipcalc
   lazygit
@@ -29,14 +29,14 @@ with pkgs; [
   electron
   go
   gcc
-  gnomeExtensions.arcmenu
-  gnomeExtensions.dash-to-dock
-  gnomeExtensions.weather-oclock
-  gnomeExtensions.blur-my-shell
-  gnomeExtensions.just-perfection
-  gnomeExtensions.extension-list
-  gnomeExtensions.open-bar
-  gnomeExtensions.appindicator
+  # gnomeExtensions.arcmenu
+  # gnomeExtensions.dash-to-dock
+  # gnomeExtensions.weather-oclock
+  # gnomeExtensions.blur-my-shell
+  # gnomeExtensions.just-perfection
+  # gnomeExtensions.extension-list
+  # gnomeExtensions.open-bar
+  # gnomeExtensions.appindicator
   python3
   nodejs
   nil
@@ -54,7 +54,6 @@ with pkgs; [
   # GUI Apps
   bottles
   discord
-  floorp
   firefox
   freerdp
   nautilus
@@ -73,7 +72,7 @@ with pkgs; [
   hyprpaper
   jq
   mako
-  rofi-wayland
+  # rofi-wayland
   satty
   slurp
   swaybg
@@ -112,9 +111,9 @@ with pkgs; [
   nmap
 
   # ROCm
-  ollama-rocm
-  rocmPackages.rpp
-  rocmPackages.rocm-smi
+  # ollama-rocm
+  # rocmPackages.rpp
+  # rocmPackages.rocm-smi
 
   # Teams
   teams-for-linux
