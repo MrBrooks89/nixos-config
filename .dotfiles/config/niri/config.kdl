@@ -237,6 +237,8 @@ binds {
     Mod+T {spawn-sh "env NIXOS_OZONE_WL=0 teams-for-linux"; }
     // Open Mako History
     Mod+H { spawn-sh "~/.config/niri/mako_history.sh"; }
+    // Open RingCentral
+    Mod+R hotkey-overlay-title="Open RingCentral Phone App" {spawn-sh "appimage-run ~/Documents/RingCentral.Embeddable-0.4.3.AppImage";}
     
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
@@ -365,7 +367,7 @@ binds {
     // Expel the bottom window from the focused column to the right.
     Mod+Period { consume-or-expel-window-right; }
 
-    Mod+R { switch-preset-column-width; }
+    //Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
