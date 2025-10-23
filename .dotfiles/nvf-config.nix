@@ -185,6 +185,7 @@
               suggestion = {
                 enabled = true;
                 auto_trigger = true;
+                debounce = 75;
               };
             };
           };
