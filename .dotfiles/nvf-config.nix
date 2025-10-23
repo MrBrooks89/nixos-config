@@ -180,9 +180,14 @@
           chatgpt.enable = false;
           copilot = {
             enable = true;
-            cmp.enable = true;
+            cmp.enable = false;
+            setupOpts = {
+              suggestion = {
+                enabled = true;
+                auto_trigger = true;
+              };
+            };
           };
-          codecompanion-nvim.enable = false;
         };
 
         autocomplete = {
