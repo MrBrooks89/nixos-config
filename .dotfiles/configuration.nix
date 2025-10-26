@@ -224,6 +224,7 @@
     home-manager
     gnome-tweaks
     gnome-extension-manager
+    # inputs.noctalia.packages.${system}.default
   ];
 
   # Enable LACTD Service For GPU Management with LACT
