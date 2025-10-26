@@ -113,8 +113,9 @@ layout {
 
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
-spawn-sh-at-startup "/home/mrbrooks/.config/niri/swww_daemon_start.sh"
+spawn-at-startup "noctalia-shell" 
+//spawn-at-startup "waybar"
+//spawn-sh-at-startup "/home/mrbrooks/.config/niri/swww_daemon_start.sh"
 spawn-at-startup "xwayland-satellite"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
