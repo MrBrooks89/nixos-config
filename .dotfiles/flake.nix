@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     sherlock = {
       url = "github:Skxxtz/sherlock";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,7 +30,6 @@
     nixpkgs,
     home-manager,
     nvf,
-    chaotic,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -44,9 +42,6 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
-          chaotic.nixosModules.nyx-cache
-          chaotic.nixosModules.nyx-overlay
-          chaotic.nixosModules.nyx-registry
         ];
       };
     };

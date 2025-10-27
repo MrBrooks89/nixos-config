@@ -70,7 +70,7 @@
         frameRate = 60;
         audioCodec = "aac";
         videoCodec = "h264";
-        quality = "very-high";
+        quality = "very_high";
         colorRange = "limited";
         showCursor = true;
         audioSource = "default_output";
@@ -156,14 +156,14 @@
         ];
       };
       dock = {
-        displayMode = "always_visible";
-        backgroundOpacity = 1;
-        floatingRatio = 1;
-        onlySameOutput = true;
+        displayMode = "Exclusive";
+        backgroundOpacity = 0;
+        floatingRatio = 60;
+        onlySameOutput = false;
         monitors = [{id = "HDMI-A-1";}];
         pinnedApps = [];
         colorizeIcons = false;
-        size = 1;
+        size = 125;
       };
       network = {
         wifiEnabled = true;
