@@ -35,6 +35,7 @@
             }
           ];
           right = [
+            {id = "Tray";}
             {id = "ScreenRecorder";}
             {id = "Volume";}
             {id = "Brightness";}
@@ -156,14 +157,14 @@
         ];
       };
       dock = {
-        displayMode = "Exclusive";
+        displayMode = "exclusive";
         backgroundOpacity = 0;
-        floatingRatio = 60;
+        floatingRatio = 0;
         onlySameOutput = false;
-        monitors = [{id = "HDMI-A-1";}];
+        monitors = ["HDMI-A-1"];
         pinnedApps = [];
         colorizeIcons = false;
-        size = 125;
+        size = 1.25;
       };
       network = {
         wifiEnabled = true;
