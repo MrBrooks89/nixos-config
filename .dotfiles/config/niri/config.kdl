@@ -212,11 +212,6 @@ window-rule {
 }
 
 
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
 // Open the apps in full screen mode
 window-rule {
     match app-id="firefox"
