@@ -66,7 +66,7 @@
         showCalendarEvents = true;
       };
       screenRecorder = {
-        directory = "~/Videos/ScreenRecordings";
+        directory = "/home/mrbrooks/Videos/ScreenRecordings";
         frameRate = 60;
         audioCodec = "aac";
         videoCodec = "h264";
@@ -78,9 +78,10 @@
       };
       wallpaper = {
         enabled = true;
-        directory = "~/Pictures/Wallpapers";
+        directory = "/home/mrbrooks/Pictures/Wallpapers";
         enableMultiMonitorDirectories = false;
         setWallpaperOnAllMonitors = true;
+        defaultWallpaper = "/home/mrbrooks/Pictures/Wallpapers/1234448.jpg";
         fillMode = "crop";
         fillColor = "#000000";
         randomEnabled = true;
@@ -159,7 +160,7 @@
         backgroundOpacity = 1;
         floatingRatio = 1;
         onlySameOutput = true;
-        monitors = [];
+        monitors = [{id = "HDMI-A-1";}];
         pinnedApps = [];
         colorizeIcons = false;
         size = 1;
