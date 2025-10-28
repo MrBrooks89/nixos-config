@@ -157,7 +157,7 @@
         ];
       };
       dock = {
-        displayMode = "exclusive";
+        displayMode = "";
         backgroundOpacity = 0;
         floatingRatio = 0;
         onlySameOutput = false;
