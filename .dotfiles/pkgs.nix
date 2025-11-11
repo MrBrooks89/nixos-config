@@ -27,6 +27,7 @@ with pkgs; [
   docker-compose
   ueberzugpp
   electron
+  fping
   go
   gcc
   # gnomeExtensions.arcmenu

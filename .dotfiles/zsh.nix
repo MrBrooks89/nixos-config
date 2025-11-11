@@ -33,6 +33,7 @@
       "lt" = "exa -a --tree --level=1 --icons";
       "nn" = "nvim";
       "vim" = "nvim";
+      "ping" = "fping";
     };
 
     # Use initContent to source environment variables from the .env file

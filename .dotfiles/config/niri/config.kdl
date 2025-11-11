@@ -203,6 +203,7 @@ window-rule {
     match app-id="teams"
     match app-id="steam"
     match app-id="kitty"
+    match app-id="ringcentral"
     opacity 1.0
 }
 window-rule {
