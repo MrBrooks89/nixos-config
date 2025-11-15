@@ -89,7 +89,7 @@ with pkgs; [
 
   # Gaming
   gamescope
-  glxinfo
+  mesa-demos
   lutris
   mangohud
   mangojuice

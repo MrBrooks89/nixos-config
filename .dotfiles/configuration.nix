@@ -53,7 +53,7 @@
   # Enable nix-ld-rs to run non-nix executables | Needed for Neovim Plugins
   programs.nix-ld = {
     enable = true;
-    package = pkgs.nix-ld-rs;
+    package = pkgs.nix-ld;
   };
   # Fixes Electron/Wayland apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

@@ -157,7 +157,7 @@
         ];
       };
       dock = {
-        displayMode = "";
+        displayMode = "AutoHide";
         backgroundOpacity = 0;
         floatingRatio = 0;
         onlySameOutput = false;
