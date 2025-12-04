@@ -139,10 +139,10 @@
   };
 
   services.blueman.enable = true;
-  hardware.xpadneo.enable = true; # Enable the xpadneo driver for Xbox BT Controller
-
+  hardware.xpad-noone.enable = false;
+  hardware.xpadneo.enable = false;
+  hardware.xone.enable = true; # Enable the xone driver for Xbox One controllers
   boot = {
-    extraModulePackages = with config.boot.kernelPackages; [xpadneo];
     extraModprobeConfig = ''
       options bluetooth disable_ertm=Y
     '';

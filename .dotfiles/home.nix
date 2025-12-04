@@ -10,7 +10,7 @@
     ./zsh.nix
     ./sherlock.nix
     ./nvf-config.nix
-    ./noctalia.nix
+    # ./noctalia.nix
   ];
 
   xdg.configFile."kitty" = {
