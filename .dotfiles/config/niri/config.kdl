@@ -229,7 +229,7 @@ binds {
     // Open Browser
     Mod+B hotkey-overlay-title="Open Browser: Firefox" {spawn "firefox";}
     // Open Music player Cider
-    Mod+M hotkey-overlay-title="Open Music Player: Cider" {spawn-sh "appimage-run ~/Documents/cider-v3.1.2-linux-x64.AppImage";}
+    Mod+M hotkey-overlay-title="Open Music Player: Cider" {spawn-sh "appimage-run ~/Documents/cider-v3.1.8-linux-x64.AppImage";}
     // Open Teams for Linux in XWayland
     Mod+T {spawn-sh "env NIXOS_OZONE_WL=0 teams-for-linux"; }
     // Open Mako History
