@@ -76,4 +76,5 @@
   programs.helix = {
     enable = true;
   };
+
 }
