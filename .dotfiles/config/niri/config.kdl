@@ -250,8 +250,8 @@ binds {
     // For example, this is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    F5 { spawn-sh "playerctl play-pause"; }
-    F6 { spawn-sh  "playerctl next"; }
+    F9 { spawn-sh "playerctl play-pause"; }
+    F10 { spawn-sh  "playerctl next"; }
 
     // View all workspaces
     Mod+O repeat=false { toggle-overview; }
