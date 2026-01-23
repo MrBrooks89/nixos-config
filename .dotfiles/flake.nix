@@ -15,6 +15,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-cachyos-kernel = {
+      url = "github:xddxdd/nix-cachyos-kernel/release";
+    };
     # quickshell = {
     #   url = "github:outfoxxed/quickshell";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +33,7 @@
     nixpkgs,
     home-manager,
     nvf,
+    nix-cachyos-kernel,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;

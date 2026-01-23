@@ -13,7 +13,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 
   networking.hostName = "nixos";
 
@@ -89,6 +89,8 @@
 
   # Nix Settings
   nix.settings = {
+    substituters = ["https://attic.xuyh0120.win/lantian"];
+    trusted-public-keys = ["lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="];
     auto-optimise-store = true; # automatic deduplication of the nix store
     download-buffer-size = 33554432; # increase buffer size 32MiB for 1Gb internet
   };
@@ -215,6 +217,8 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.overlays = [inputs.nix-cachyos-kernel.overlays.pinned];
 
   # Packages needed for initial config
   environment.systemPackages = with pkgs; [
