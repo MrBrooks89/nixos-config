@@ -29,6 +29,7 @@ with pkgs; [
   electron
   fping
   go
+  gemini-cli
   gcc
   # gnomeExtensions.arcmenu
   # gnomeExtensions.dash-to-dock
