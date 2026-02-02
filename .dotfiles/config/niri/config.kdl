@@ -42,7 +42,7 @@ output "DP-2" {
 }
 // Monitor 1
 output "HDMI-A-1" {
-  mode "2560x1440@119.998"
+  mode "2560x1440@84.983"
   scale 1
   transform "normal"
   position x=0 y=0
