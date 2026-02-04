@@ -36,7 +36,7 @@
   #     wayland.enable = true;
   #   };
 
-  # services.desktopManager.gnome.enable = true; # Enable GNOME
+  services.desktopManager.gnome.enable = true; # Enable GNOME
 
   # Enable hyprland
   programs.hyprland = {
