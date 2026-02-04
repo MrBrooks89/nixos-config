@@ -36,7 +36,7 @@
   #     wayland.enable = true;
   #   };
 
-  services.desktopManager.gnome.enable = true; # Enable GNOME
+  services.desktopManager.gnome.enable = false; # Enable GNOME
 
   # Enable hyprland
   programs.hyprland = {
@@ -226,8 +226,8 @@
     kitty
     lact
     home-manager
-    gnome-tweaks
-    gnome-extension-manager
+    # gnome-tweaks
+    # gnome-extension-manager
     # inputs.noctalia.packages.${system}.default
   ];
 
