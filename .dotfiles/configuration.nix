@@ -63,7 +63,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  boot.kernelParams = ["nohibernate"];
+  boot.kernelParams = ["nohibernate" "amdgpu.ppfeaturemask=0xffffffff"];
 
   # Enable BBR congestion control
   boot.kernelModules = ["tcp_bbr" "iptable_nat" "iptables"]; # Enables BBR
