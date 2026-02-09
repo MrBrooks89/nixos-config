@@ -1,6 +1,7 @@
 {pkgs}:
 with pkgs; [
   # CLI Utilities
+  ani-cli
   appimage-run
   bat
   btop

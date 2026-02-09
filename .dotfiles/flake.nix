@@ -18,6 +18,10 @@
     nix-cachyos-kernel = {
       url = "github:xddxdd/nix-cachyos-kernel/release";
     };
+    yt-x = {
+      url = "github:Benexl/yt-x";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # quickshell = {
     #   url = "github:outfoxxed/quickshell";
     #   inputs.nixpkgs.follows = "nixpkgs";

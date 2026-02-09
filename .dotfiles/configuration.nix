@@ -226,6 +226,7 @@
     kitty
     lact
     home-manager
+    inputs.yt-x.packages.${system}.default
     # gnome-tweaks
     # gnome-extension-manager
     # inputs.noctalia.packages.${system}.default
