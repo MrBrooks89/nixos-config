@@ -66,6 +66,7 @@ with pkgs; [
   vlc
   vscodium
   wireshark
+  heroic
 
   # Wayland/Hyprland/Niri
   grim
