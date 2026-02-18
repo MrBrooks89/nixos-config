@@ -30,6 +30,12 @@
     wayland = true;
   };
 
+  # Manually Set NTP Server
+  services.timesyncd = {
+    enable = true;
+    servers = ["192.168.4.1"];
+  };
+
   # # Enable SDDM Display Manager
   #   services.displayManager.sddm = {
   #     enable = true;
