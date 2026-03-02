@@ -72,9 +72,9 @@
 
   programs.yazi = {
     enable = true;
+    shellWrapperName = "y";
   };
   programs.helix = {
     enable = true;
   };
-
 }

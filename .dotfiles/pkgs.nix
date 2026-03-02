@@ -101,7 +101,7 @@ with pkgs; [
   protonup-ng
   steamtinkerlaunch
   winetricks
-  wineWowPackages.full
+  wineWow64Packages.full
   vkbasalt
   vulkan-tools
 
