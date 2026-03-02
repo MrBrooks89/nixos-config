@@ -33,7 +33,7 @@ input {
 }
 
 // Monitor 2
-output "DP-2" {
+output "DP-1" {
     mode "1920x1080@143.992"
     scale 1
     transform "normal"
@@ -219,6 +219,11 @@ window-rule {
     match app-id="firefox"
     match app-id="teams"
     open-maximized true
+}
+
+window-rule {
+match app-id="mpv"
+open-floating true
 }
 
 

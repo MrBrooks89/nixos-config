@@ -180,7 +180,7 @@
       {
         name = "Canon_MB2720";
         location = "Home";
-        deviceUri = "http://192.168.5.129:631/";
+        deviceUri = "http://192.168.5.105:631/";
         model = "canonmb2700.ppd";
         ppdOptions = {
           PageSize = "Letter Small";
