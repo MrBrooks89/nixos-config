@@ -41,19 +41,19 @@
         priority = 1;
         home = "Home";
       }
-      {
-        name = "Weather";
-        type = "weather";
-        args = {
-          location = "longview";
-          update_interval = 60;
-        };
-        priority = 1;
-        home = "OnlyHome";
-        async = true;
-        shortcut = false;
-        spawn_focus = false;
-      }
+      # {
+      #   name = "Weather";
+      #   type = "weather";
+      #   args = {
+      #     location = "longview";
+      #     update_interval = 60;
+      #   };
+      #   priority = 1;
+      #   home = "OnlyHome";
+      #   async = true;
+      #   shortcut = false;
+      #   spawn_focus = false;
+      # }
       {
         name = "Calculator";
         type = "calculation";
