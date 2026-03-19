@@ -11,8 +11,8 @@ with pkgs; [
   ueberzugpp
   eza
   fastfetch
-  # file-roller
   fd
+  gpu-screen-recorder
   ipcalc
   lazygit
   wget

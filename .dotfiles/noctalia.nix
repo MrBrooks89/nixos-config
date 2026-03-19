@@ -240,24 +240,6 @@
         manualSunset = "19:00";
       };
 
-      colors = {
-        # you must set ALL of these
-        mError = "#dddddd";
-        mOnError = "#111111";
-        mOnPrimary = "#111111";
-        mOnSecondary = "#111111";
-        mOnSurface = "#828282";
-        mOnSurfaceVariant = "#5d5d5d";
-        mOnTertiary = "#111111";
-        mOutline = "#3c3c3c";
-        mPrimary = "#aaaaaa";
-        mSecondary = "#a7a7a7";
-        mShadow = "#000000";
-        mSurface = "#111111";
-        mSurfaceVariant = "#191919";
-        mTertiary = "#cccccc";
-      };
-
       # Audio and brightness settings
       audio = {
         volumeIncrement = 5;
@@ -279,6 +261,42 @@
           timeout = 0; # No timeout for critical
         };
       };
+    };
+
+    colors = {
+      # you must set ALL of these
+      mError = "#dddddd";
+      mOnError = "#111111";
+      mOnPrimary = "#111111";
+      mOnSecondary = "#111111";
+      mOnSurface = "#828282";
+      mOnSurfaceVariant = "#5d5d5d";
+      mOnTertiary = "#111111";
+      mOutline = "#3c3c3c";
+      mPrimary = "#aaaaaa";
+      mSecondary = "#a7a7a7";
+      mShadow = "#000000";
+      mSurface = "#111111";
+      mSurfaceVariant = "#191919";
+      mTertiary = "#cccccc";
+    };
+
+    #plugin settings
+    plugins = {
+      sources = [
+        {
+          enabled = true;
+          name = "Offical Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+      states = {
+        screen-recorder = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+      };
+      version = 2;
     };
   };
 }
