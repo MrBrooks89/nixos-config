@@ -87,7 +87,6 @@ with pkgs; [
   wl-clipboard
   wofi
   wmctrl
-  quickshell
   xdotool
   xwayland-satellite
 

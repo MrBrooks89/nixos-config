@@ -10,7 +10,7 @@
   ];
 
   # Install Noctalia package
-  home.packages = [inputs.noctalia.packages.${pkgs.system}.default];
+  home.packages = [inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default];
 
   # Enable and configure Noctalia Shell
   programs.noctalia-shell = {
@@ -157,7 +157,7 @@
         ];
       };
       dock = {
-        displayMode = "AutoHide";
+        displayMode = "auto_hide";
         backgroundOpacity = 0;
         floatingRatio = 0;
         onlySameOutput = false;
@@ -165,6 +165,7 @@
         pinnedApps = [];
         colorizeIcons = false;
         size = 1.25;
+        dockType = "attached";
       };
       network = {
         wifiEnabled = true;
@@ -265,20 +266,20 @@
 
     colors = {
       # you must set ALL of these
-      mError = "#dddddd";
-      mOnError = "#111111";
-      mOnPrimary = "#111111";
-      mOnSecondary = "#111111";
-      mOnSurface = "#828282";
-      mOnSurfaceVariant = "#5d5d5d";
-      mOnTertiary = "#111111";
-      mOutline = "#3c3c3c";
-      mPrimary = "#aaaaaa";
-      mSecondary = "#a7a7a7";
+      mError = "#ff5555";
+      mOnError = "#000000";
+      mOnPrimary = "#000000";
+      mOnSecondary = "#f8f8f2";
+      mOnSurface = "#f8f8f2";
+      mOnSurfaceVariant = "#bd93f9";
+      mOnTertiary = "#000000";
+      mOutline = "#bd93f9";
+      mPrimary = "#bd93f9";
+      mSecondary = "#6272a4";
       mShadow = "#000000";
-      mSurface = "#111111";
-      mSurfaceVariant = "#191919";
-      mTertiary = "#cccccc";
+      mSurface = "#000000";
+      mSurfaceVariant = "#111111";
+      mTertiary = "#ff79c6";
     };
 
     #plugin settings

@@ -232,10 +232,10 @@
     kitty
     lact
     home-manager
-    inputs.yt-x.packages.${system}.default
+    inputs.yt-x.packages.${stdenv.hostPlatform.system}.default
     # gnome-tweaks
     # gnome-extension-manager
-    # inputs.noctalia.packages.${system}.default
+    # inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
   ];
 
   # Enable LACTD Service For GPU Management with LACT
