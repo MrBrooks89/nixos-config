@@ -207,7 +207,7 @@
       };
       colorSchemes = {
         useWallpaperColors = false;
-        predefinedScheme = "Noctalia (default)";
+        predefinedScheme = "Dracula";
         darkMode = true;
         matugenSchemeType = "scheme-fruit-salad";
         generateTemplatesForPredefined = true;
