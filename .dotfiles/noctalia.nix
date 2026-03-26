@@ -50,7 +50,7 @@
           ];
           right = [
             {id = "Tray";}
-            {id = "Screen Recorder";}
+            {id = "screen-recorder";}
             {id = "Volume";}
             {id = "Network";}
             {id = "Clock";}
