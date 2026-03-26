@@ -50,9 +50,8 @@
           ];
           right = [
             {id = "Tray";}
-            {id = "ScreenRecorder";}
+            {id = "Screen Recorder";}
             {id = "Volume";}
-            {id = "Brightness";}
             {id = "Network";}
             {id = "Clock";}
             {id = "ControlCenter";}
@@ -93,24 +92,43 @@
       };
       wallpaper = {
         enabled = true;
+        overviewEnabled = false;
         directory = "/home/mrbrooks/Pictures/Wallpapers";
         enableMultiMonitorDirectories = false;
+        showHiddenFiles = false;
+        viewMode = "single";
         setWallpaperOnAllMonitors = true;
-        defaultWallpaper = "/home/mrbrooks/Pictures/Wallpapers/1234448.jpg";
         fillMode = "crop";
         fillColor = "#000000";
+        useSolidColor = false;
+        automationEnabled = false;
         randomEnabled = true;
         randomIntervalSec = 300;
         transitionDuration = 1500;
-        transitionType = "random";
+        wallpaperChangeMode = "random";
         transitionEdgeSmoothness = 0.05;
-        monitors = [];
+        transitionType = [
+          "fade"
+          "disc"
+          "stripes"
+          "wipe"
+          "pixelate"
+          "honeycomb"
+        ];
+        skipStartupTransition = false;
+        panelPosition = "follow_bar";
+        overviewBlur = 0.4;
+        overviewTint = 0.6;
+        useWallhaven = false;
+        sortOrder = "name";
+        favorites = [];
       };
       appLauncher = {
         enableClipboardHistory = false;
         position = "center";
         backgroundOpacity = 1;
-        pinnedExecs = [];
+        pinnedApps = [];
+        widgetOutlines = true;
         useApp2Unit = false;
         sortByMostUsed = true;
         terminalCommand = "kitty -e";
@@ -170,6 +188,31 @@
           }
         ];
       };
+
+      systemMonitor = {
+        cpuWarningThreshold = 80;
+        cpuCriticalThreshold = 90;
+        tempWarningThreshold = 80;
+        tempCriticalThreshold = 90;
+        gpuWarningThreshold = 80;
+        gpuCriticalThreshold = 90;
+        memWarningThreshold = 80;
+        memCriticalThreshold = 90;
+        swapWarningThreshold = 80;
+        swapCriticalThreshold = 90;
+        diskWarningThreshold = 80;
+        diskCriticalThreshold = 90;
+        diskAvailWarningThreshold = 20;
+        diskAvailCriticalThreshold = 10;
+        batteryWarningThreshold = 20;
+        batteryCriticalThreshold = 5;
+        enableDgpuMonitoring = false;
+        useCustomColors = false;
+        warningColor = "";
+        criticalColor = "";
+        externalMonitor = "resources || missioncenter || jdsystemmonitor || corestats || system-monitoring-center || gnome-system-monitor || plasma-systemmonitor || mate-system-monitor || ukui-system-monitor || deepin-system-monitor || pantheon-system-monitor";
+      };
+
       dock = {
         displayMode = "auto_hide";
         backgroundOpacity = 0;
