@@ -18,8 +18,22 @@
     settings = {
       # Bar configuration
       bar = {
+        barType = "simple";
         position = "top";
         density = "default";
+        showOutline = true;
+        showCapsule = true;
+        capsuleOpacity = 1;
+        capsuleColorKey = "none";
+        widgetSpacing = 6;
+        widgetPadding = 2;
+        fontScale = 1;
+        enableExclusionZoneInset = true;
+        useSeparateOpacity = true;
+        backgroundOpacity = 0;
+        hideOnOverview = false;
+        outerCorners = true;
+        displayMode = "always_visible";
         widgets = {
           left = [
             {id = "SystemMonitor";}
