@@ -37,9 +37,7 @@
         widgets = {
           left = [
             {id = "SystemMonitor";}
-
-            {id = "AcitveWindow";}
-
+            {id = "ActiveWindow";}
             {id = "MediaMini";}
           ];
           center = [
@@ -61,7 +59,6 @@
 
       # General settings
       general = {
-        # Avatar path (optional)
         # avatar = "/path/to/avatar.png";
         radiusRatio = 0.5;
         animSpeed = 200;
@@ -79,6 +76,7 @@
         showWeekNumberInCalendar = false;
         showCalendarEvents = true;
       };
+
       screenRecorder = {
         directory = "/home/mrbrooks/Videos/ScreenRecordings";
         frameRate = 60;
@@ -90,6 +88,7 @@
         audioSource = "default_output";
         videoSource = "portal";
       };
+
       wallpaper = {
         enabled = true;
         overviewEnabled = false;
@@ -123,6 +122,7 @@
         sortOrder = "name";
         favorites = [];
       };
+
       appLauncher = {
         enableClipboardHistory = false;
         position = "center";
@@ -133,59 +133,29 @@
         sortByMostUsed = true;
         terminalCommand = "kitty -e";
       };
+
       controlCenter = {
         position = "close_to_bar_button";
         shortcuts = {
           left = [
-            {
-              id = "WiFi";
-            }
-            {
-              id = "Bluetooth";
-            }
-            {
-              id = "ScreenRecorder";
-            }
-            {
-              id = "WallpaperSelector";
-            }
+            { id = "WiFi"; }
+            { id = "Bluetooth"; }
+            { id = "ScreenRecorder"; }
+            { id = "WallpaperSelector"; }
           ];
           right = [
-            {
-              id = "Notifications";
-            }
-            {
-              id = "PowerProfile";
-            }
-            {
-              id = "KeepAwake";
-            }
-            {
-              id = "NightLight";
-            }
+            { id = "Notifications"; }
+            { id = "PowerProfile"; }
+            { id = "KeepAwake"; }
+            { id = "NightLight"; }
           ];
         };
         cards = [
-          {
-            enabled = true;
-            id = "profile-card";
-          }
-          {
-            enabled = true;
-            id = "shortcuts-card";
-          }
-          {
-            enabled = true;
-            id = "audio-card";
-          }
-          {
-            enabled = true;
-            id = "weather-card";
-          }
-          {
-            enabled = true;
-            id = "media-sysmon-card";
-          }
+          { enabled = true; id = "profile-card"; }
+          { enabled = true; id = "shortcuts-card"; }
+          { enabled = true; id = "audio-card"; }
+          { enabled = true; id = "weather-card"; }
+          { enabled = true; id = "media-sysmon-card"; }
         ];
       };
 
@@ -224,19 +194,22 @@
         size = 1.25;
         dockType = "attached";
       };
+
       network = {
         wifiEnabled = true;
       };
+
       notifications = {
         doNotDisturb = false;
         monitors = [];
         location = "top_right";
         overlayLayer = true;
         respectExpireTimeout = false;
-        lowUrgencyDuration = 3;
-        normalUrgencyDuration = 8;
-        criticalUrgencyDuration = 15;
+        lowUrgencyDuration = 5;
+        normalUrgencyDuration = 10;
+        criticalUrgencyDuration = 0;
       };
+
       osd = {
         enabled = true;
         location = "top_right";
@@ -244,6 +217,7 @@
         autoHideMs = 2000;
         overlayLayer = true;
       };
+
       audio = {
         volumeStep = 5;
         volumeOverdrive = false;
@@ -251,7 +225,10 @@
         visualizerType = "linear";
         mprisBlacklist = [];
         preferredPlayer = "";
+        volumeIncrement = 5;
+        brightnessIncrement = 5;
       };
+
       ui = {
         fontDefault = "JetBrains Nerd Font";
         fontFixed = "JetBrains Mono Nerd Font";
@@ -260,9 +237,11 @@
         tooltipsEnabled = true;
         panelsOverlayLayer = true;
       };
+
       brightness = {
         brightnessStep = 5;
       };
+
       colorSchemes = {
         useWallpaperColors = false;
         predefinedScheme = "Dracula";
@@ -270,6 +249,7 @@
         matugenSchemeType = "scheme-fruit-salad";
         generateTemplatesForPredefined = true;
       };
+
       templates = {
         gtk = false;
         qt = false;
@@ -288,6 +268,7 @@
         pywalfox = false;
         enableUserTemplates = false;
       };
+
       nightLight = {
         enabled = true;
         forced = false;
@@ -297,32 +278,9 @@
         manualSunrise = "08:00";
         manualSunset = "19:00";
       };
-
-      # Audio and brightness settings
-      audio = {
-        volumeIncrement = 5;
-        brightnessIncrement = 5;
-      };
-
-      # Notification settings
-      notifications = {
-        lowUrgency = {
-          location = "top-right";
-          timeout = 5000;
-        };
-        normalUrgency = {
-          location = "top-right";
-          timeout = 10000;
-        };
-        criticalUrgency = {
-          location = "top-right";
-          timeout = 0; # No timeout for critical
-        };
-      };
     };
 
     colors = {
-      # you must set ALL of these
       mError = "#ff5555";
       mOnError = "#000000";
       mOnPrimary = "#000000";
@@ -339,7 +297,6 @@
       mTertiary = "#ff79c6";
     };
 
-    #plugin settings
     plugins = {
       sources = [
         {
