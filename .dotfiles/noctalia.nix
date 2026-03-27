@@ -100,8 +100,7 @@
         fillMode = "crop";
         fillColor = "#000000";
         useSolidColor = false;
-        automationEnabled = false;
-        randomEnabled = true;
+        automationEnabled = true;
         randomIntervalSec = 300;
         transitionDuration = 1500;
         wallpaperChangeMode = "random";
@@ -138,24 +137,39 @@
         position = "close_to_bar_button";
         shortcuts = {
           left = [
-            { id = "WiFi"; }
-            { id = "Bluetooth"; }
-            { id = "ScreenRecorder"; }
-            { id = "WallpaperSelector"; }
+            {id = "WiFi";}
+            {id = "Bluetooth";}
+            {id = "ScreenRecorder";}
+            {id = "WallpaperSelector";}
           ];
           right = [
-            { id = "Notifications"; }
-            { id = "PowerProfile"; }
-            { id = "KeepAwake"; }
-            { id = "NightLight"; }
+            {id = "Notifications";}
+            {id = "PowerProfile";}
+            {id = "KeepAwake";}
+            {id = "NightLight";}
           ];
         };
         cards = [
-          { enabled = true; id = "profile-card"; }
-          { enabled = true; id = "shortcuts-card"; }
-          { enabled = true; id = "audio-card"; }
-          { enabled = true; id = "weather-card"; }
-          { enabled = true; id = "media-sysmon-card"; }
+          {
+            enabled = true;
+            id = "profile-card";
+          }
+          {
+            enabled = true;
+            id = "shortcuts-card";
+          }
+          {
+            enabled = true;
+            id = "audio-card";
+          }
+          {
+            enabled = true;
+            id = "weather-card";
+          }
+          {
+            enabled = true;
+            id = "media-sysmon-card";
+          }
         ];
       };
 
