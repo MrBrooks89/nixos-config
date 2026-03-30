@@ -55,7 +55,6 @@ with pkgs; [
   lua51Packages.jsregexp
 
   # GUI Apps
-  bottles
   discord
   firefox
   freerdp
@@ -66,7 +65,6 @@ with pkgs; [
   vlc
   vscodium
   wireshark
-  heroic
 
   # Wayland/Hyprland/Niri
   grim
@@ -89,20 +87,6 @@ with pkgs; [
   wmctrl
   xdotool
   xwayland-satellite
-
-  # Gaming
-  gamescope
-  mesa-demos
-  lutris
-  mangohud
-  mangojuice
-  protontricks
-  protonup-ng
-  steamtinkerlaunch
-  winetricks
-  wineWow64Packages.full
-  vkbasalt
-  vulkan-tools
 
   # System
   pavucontrol

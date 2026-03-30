@@ -8,7 +8,11 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./modules/gaming.nix
   ];
+
+  # Enable Custom Modules
+  myModules.gaming.enable = true;
   # Bootloader. Test 2
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -147,14 +151,6 @@
   };
 
   services.blueman.enable = true;
-  hardware.xpad-noone.enable = false;
-  hardware.xpadneo.enable = false;
-  hardware.xone.enable = true; # Enable the xone driver for Xbox One controllers
-  boot = {
-    extraModprobeConfig = ''
-      options bluetooth disable_ertm=Y
-    '';
-  };
 
   # Enable the X11 windowing system.
   # services.xserver = {
@@ -256,22 +252,6 @@
     powerline-symbols
     nerd-fonts.jetbrains-mono
   ];
-
-  # Enables and installs steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
-
-  # Sets steam location for Proton GE
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
-  };
-
-  # Enable gamemode
-  programs.gamemode.enable = true;
 
   # Disable IPv6
   networking.enableIPv6 = false;
