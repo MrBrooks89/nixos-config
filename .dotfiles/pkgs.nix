@@ -11,10 +11,8 @@ with pkgs; [
   ueberzugpp
   eza
   fastfetch
-  fd
   gpu-screen-recorder
   ipcalc
-  lazygit
   wget
   unzip
   tcpdump
@@ -24,35 +22,6 @@ with pkgs; [
   vim
 
   # Development
-  bootdev-cli
-  docker-compose
-  ueberzugpp
-  electron
-  fping
-  go
-  gemini-cli
-  gcc
-  # gnomeExtensions.arcmenu
-  # gnomeExtensions.dash-to-dock
-  # gnomeExtensions.weather-oclock
-  # gnomeExtensions.blur-my-shell
-  # gnomeExtensions.just-perfection
-  # gnomeExtensions.extension-list
-  # gnomeExtensions.open-bar
-  # gnomeExtensions.appindicator
-  python3
-  nodejs
-  nil
-  nixpkgs-fmt
-  lua
-  luarocks-nix
-  stdenv.cc.cc.lib
-  sshfs
-  ripgrep
-  wlr-protocols
-  python3.pkgs.xkbcommon
-  python3.pkgs.pywayland
-  lua51Packages.jsregexp
 
   # GUI Apps
   discord
@@ -65,34 +34,6 @@ with pkgs; [
   vlc
   vscodium
   wireshark
-
-  # Wayland/Hyprland/Niri
-  grim
-  hyprlock
-  hypridle
-  hyprcursor
-  hyprpaper
-  jq
-  mako
-  # rofi-wayland
-  satty
-  slurp
-  swaybg
-  swaylock-effects
-  swappy
-  swww
-  waybar
-  wl-clipboard
-  wofi
-  wmctrl
-  xdotool
-  xwayland-satellite
-
-  # System
-  pavucontrol
-  playerctl
-  nwg-look
-  libnotify
 
   # Security
   amass

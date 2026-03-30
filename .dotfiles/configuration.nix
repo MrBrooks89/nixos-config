@@ -9,10 +9,14 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./modules/gaming.nix
+    ./modules/desktop.nix
+    ./modules/dev.nix
   ];
 
   # Enable Custom Modules
   myModules.gaming.enable = true;
+  myModules.desktop.enable = true;
+  myModules.dev.enable = true;
   # Bootloader. Test 2
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -21,52 +25,11 @@
 
   networking.hostName = "nixos";
 
-  # Enable Docker
-  virtualisation.docker.enable = true;
-
-  # Enable Niri
-  programs.niri = {
-    enable = true;
-  };
-
-  services.displayManager.gdm = {
-    enable = true;
-    wayland = true;
-  };
-
   # Manually Set NTP Server
   services.timesyncd = {
     enable = true;
     servers = ["192.168.4.1"];
   };
-
-  # # Enable SDDM Display Manager
-  #   services.displayManager.sddm = {
-  #     enable = true;
-  #     wayland.enable = true;
-  #   };
-
-  services.desktopManager.gnome.enable = false; # Enable GNOME
-
-  # Enable hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
-  # Enable Neovim
-  # programs.neovim = {
-  #   enable = true;
-  #   defaultEditor = true;
-  # };
-  #
-  # Enable nix-ld-rs to run non-nix executables | Needed for Neovim Plugins
-  programs.nix-ld = {
-    enable = true;
-    package = pkgs.nix-ld;
-  };
-  # Fixes Electron/Wayland apps
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Required to be able to use zsh as default shell
   programs.zsh.enable = true;
@@ -244,14 +207,6 @@
     };
     enable = true;
   };
-
-  # Enables fonts
-  fonts.packages = with pkgs; [
-    font-awesome
-    powerline-fonts
-    powerline-symbols
-    nerd-fonts.jetbrains-mono
-  ];
 
   # Disable IPv6
   networking.enableIPv6 = false;
