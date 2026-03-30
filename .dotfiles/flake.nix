@@ -47,11 +47,11 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      gamingdesktop = lib.nixosSystem {
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./configuration.nix
+          ./hosts/gamingdesktop.nix
         ];
       };
     };
