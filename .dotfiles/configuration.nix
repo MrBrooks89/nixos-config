@@ -11,12 +11,14 @@
     ./modules/gaming.nix
     ./modules/desktop.nix
     ./modules/dev.nix
+    ./modules/printer.nix
   ];
 
   # Enable Custom Modules
   myModules.gaming.enable = true;
   myModules.desktop.enable = true;
   myModules.dev.enable = true;
+  myModules.printer.enable = true;
   # Bootloader. Test 2
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -114,40 +116,6 @@
   };
 
   services.blueman.enable = true;
-
-  # Enable the X11 windowing system.
-  # services.xserver = {
-  #         enable = true; # Required for GDM
-  # };
-  #
-  #
-  # Enable CUPS to print documents.
-  services.printing = {
-    enable = true;
-    drivers = with pkgs; [cnijfilter2];
-  };
-
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-
-  # Manully Set Canon Printer
-  hardware.printers = {
-    ensurePrinters = [
-      {
-        name = "Canon_MB2720";
-        location = "Home";
-        deviceUri = "http://192.168.5.105:631/";
-        model = "canonmb2700.ppd";
-        ppdOptions = {
-          PageSize = "Letter Small";
-        };
-      }
-    ];
-    ensureDefaultPrinter = "Canon_MB2720";
-  };
 
   # Disable sound with pulseaudio
   services.pulseaudio.enable = false;
