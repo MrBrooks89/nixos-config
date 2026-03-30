@@ -6,37 +6,21 @@
   ...
 }: {
   imports = [
-    ./starship.nix
-    ./zsh.nix
-    ./sherlock.nix
-    ./nvf-config.nix
-    ./noctalia.nix
+    ./modules/home/starship.nix
+    ./modules/home/zsh.nix
+    ./modules/home/sherlock.nix
+    ./modules/home/nvf-config.nix
+    ./modules/home/noctalia.nix
+    ./modules/home/theme.nix
+    ./modules/home/desktop.nix
+    ./modules/home/filemanager.nix
+    ./modules/home/packages.nix
   ];
 
-  xdg.configFile."kitty" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/kitty";
-    recursive = true;
-  };
-
-  xdg.configFile."niri" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/niri";
-    recursive = true;
-  };
-
-  xdg.configFile."waybar" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/waybar";
-    recursive = true;
-  };
-
-  xdg.configFile."yazi" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/yazi";
-    recursive = true;
-  };
-
-  xdg.configFile."mako" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/mako";
-    recursive = true;
-  };
+  # Enable Home Modules
+  myHomeModules.theme.enable = true;
+  myHomeModules.desktop.enable = true;
+  myHomeModules.filemanager.enable = true;
 
   home.username = "mrbrooks";
   home.homeDirectory = "/home/mrbrooks";
@@ -45,37 +29,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = import ./pkgs.nix {inherit pkgs;};
-
   programs = {
     fzf.enable = true;
-  };
-
-  gtk = {
-    enable = true;
-    gtk4.theme = null;
-    theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
-    };
-    iconTheme = lib.mkDefault {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    cursorTheme = {
-      name = "rose-pine-cursor";
-      package = pkgs.rose-pine-cursor;
-    };
-  };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  programs.yazi = {
-    enable = true;
-    shellWrapperName = "y";
-  };
-  programs.helix = {
-    enable = true;
+    home-manager.enable = true;
+    helix.enable = true;
   };
 }
