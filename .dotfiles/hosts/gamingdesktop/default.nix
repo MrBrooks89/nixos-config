@@ -7,13 +7,13 @@
 }: {
   imports = [
     # Include the results of the hardware scan.
-    ../hardware-configuration.nix
-    ../modules/gaming.nix
-    ../modules/desktop.nix
-    ../modules/dev.nix
-    ../modules/printer.nix
-    ../modules/network.nix
-    ../modules/system.nix
+    ./hardware-configuration.nix
+    ../../modules/gaming.nix
+    ../../modules/desktop.nix
+    ../../modules/dev.nix
+    ../../modules/printer.nix
+    ../../modules/network.nix
+    ../../modules/system.nix
   ];
 
   # Enable Custom Modules

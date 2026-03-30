@@ -51,7 +51,7 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/gamingdesktop.nix
+          ./hosts/gamingdesktop/default.nix
         ];
       };
     };
