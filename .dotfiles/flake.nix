@@ -54,6 +54,13 @@
           ./hosts/gamingdesktop/default.nix
         ];
       };
+      nixos-server = lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/nixos-server/default.nix
+        ];
+      };
     };
 
     homeConfigurations = {
