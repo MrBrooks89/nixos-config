@@ -64,12 +64,22 @@
     };
 
     homeConfigurations = {
-      # Home Manager configuration for mrbrooks
-      mrbrooks = home-manager.lib.homeManagerConfiguration {
+      # Home Manager configuration for mrbrooks on Gaming Desktop
+      "mrbrooks@gamingdesktop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit inputs;};
         modules = [
           ./home.nix
+          nvf.homeManagerModules.default
+        ];
+      };
+
+      # Home Manager configuration for mrbrooks on NixOS Server
+      "mrbrooks@nixos-server" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs;};
+        modules = [
+          ./home-server.nix
           nvf.homeManagerModules.default
         ];
       };
