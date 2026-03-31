@@ -115,8 +115,6 @@
     };
   };
 
-  nixpkgs.overlays = [inputs.nix-cachyos-kernel.overlays.pinned];
-
   # Packages needed for initial config
   environment.systemPackages = with pkgs; [
     git
