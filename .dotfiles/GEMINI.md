@@ -1,52 +1,44 @@
 # Workspace Context: NixOS Dotfiles
 
-You are assisting `mrbrooks` with their highly customized NixOS configuration. This workspace uses a modern, Flake-based approach with Home Manager for user-level configuration.
+You are assisting `mrbrooks` with their highly customized NixOS configuration. This workspace uses a modern, Flake-based approach with Home Manager for multi-host management.
 
 ## System Architecture
 - **OS**: NixOS (Unstable channel)
-- **Kernel**: CachyOS (`linuxPackages-cachyos-latest`) with BBR congestion control enabled.
-- **Bootloader**: `systemd-boot` (EFI).
+- **Hosts**:
+    - **gamingdesktop**: Primary workstation.
+        - **Kernel**: CachyOS (`linuxPackages-cachyos-latest`) with BBR.
+        - **Hardware**: AMD CPU/GPU (managed via `lact`), Bluetooth, Xbox Controller support.
+        - **Bootloader**: `systemd-boot` (EFI).
+    - **nixos-server**: Proxmox/HomeLab guest.
+        - **Role**: Service hosting (Cloudflared tunnels, Cron jobs, SMB/CIFS mounts).
+        - **Bootloader**: GRUB.
 - **Package Management**: Nix Flakes + Home Manager.
-- **Hardware**: 
-    - AMD CPU (microcode enabled)
-    - AMD GPU (managed via `lact`)
-    - Bluetooth (experimental features enabled for battery reporting)
-    - Xbox Controller support (`xone` driver)
-    - Printer: Canon MB2720 (`cnijfilter2` driver)
 
-## Desktop Environment & UI
-- **Window Manager**: 
-    - **Niri**: Primary scroll-based tiling compositor.
-    - **Hyprland**: Also enabled as an alternative.
-- **Shell/UI Components**:
-    - **Noctalia Shell**: Comprehensive DE-like shell (bar, dock, control center).
-    - **Sherlock**: Feature-rich launcher/utility (Raycast/Alfred alternative).
-    - **Waybar**: Used in conjunction with WMs.
-    - **Mako**: Notification daemon.
-    - **Kitty**: Primary terminal emulator.
-- **Theming**: 
-    - **GTK/Nvim/Noctalia**: Dracula (Night) theme.
-    - **Icons**: Papirus-Dark.
-    - **Cursors**: Rose-Pine.
-    - **Fonts**: JetBrains Mono Nerd Font.
+## Desktop Environment & UI (gamingdesktop)
+- **Window Manager**: **Niri** (Primary), Hyprland (Alternative).
+- **Shell/UI**: **Noctalia Shell**, **Sherlock** launcher, Waybar, Mako.
+- **Theming**: Dracula (Night) for GTK/Nvim/Noctalia, Papirus-Dark icons.
+- **Fonts**: JetBrains Mono Nerd Font.
 
 ## Development Stack
-- **Editor**: Neovim managed via **`nvf`** (notashelf/nvf).
-    - Key bindings: `jj` for Esc, `y` for system clipboard (`"+y`).
-    - Plugins: Copilot, blink-cmp, telescope, neogit, toggleterm.
+- **Editor**: Neovim managed via **`nvf`** (key bindings: `jj` for Esc, `y` for system clipboard).
 - **Languages**: Go, Python, Nix (nil LSP), Rust, Node.js.
-- **Shell**: Zsh + Starship.
-    - Aliases: `cat` -> `bat`, `ls/ll/lt` -> `eza`, `nn/vim` -> `nvim`.
-- **CLI Tools**: `yazi` (file manager), `fzf`, `lazygit`, `btop`, `fastfetch`.
+- **Shell**: Zsh + Starship. Aliases: `cat` -> `bat`, `ls/ll` -> `eza`, `nn/vim` -> `nvim`.
+- **CLI Tools**: `yazi` (file manager), `fzf`, `lazygit`, `btop`.
 
 ## Configuration Workflow
-- **Dotfile Location**: `/home/mrbrooks/.dotfiles`
-- **Symlinking**: Config files in `/home/mrbrooks/.dotfiles/config/` (kitty, niri, waybar, yazi, mako) are symlinked to `~/.config/` via Home Manager `mkOutOfStoreSymlink`.
-- **Updates**: Changes should be made in the `.nix` files or the `config/` directory, then applied via `nixos-rebuild switch --flake .` or `home-manager switch --flake .`.
+- **Dotfile Location**: `/home/mrbrooks/.dotfiles` (or `~/nixos-config` on server).
+- **Home Manager Structure**:
+    - **`home-common.nix`**: Shared base (Zsh, Nvim, Starship, basic tools).
+    - **`home.nix`**: Desktop/Gaming specific config (imports common base).
+    - **`home-server.nix`**: Lightweight server config (imports common base, disables GUI modules).
+- **Applying Changes**:
+    - **System**: `sudo nixos-rebuild switch --flake .#<hostname>`
+    - **User**: `home-manager switch --flake .#mrbrooks@<hostname>`
 
 ## Interaction Guidelines
-1. **Surgical Nix Changes**: When suggesting changes to `.nix` files, respect the existing module structure (`pkgs.nix`, `zsh.nix`, etc.).
-2. **Symlink Awareness**: Remember that many configs are symlinked from the `.dotfiles/config` directory. If modifying a tool's config, check if it's managed via Nix or a symlinked file.
-3. **Noctalia/Sherlock Knowledge**: Be aware of these specific inputs/modules as they handle significant portions of the UI.
-4. **Performance & Gaming**: The system is tuned for performance (CachyOS, BBR, GameMode). Keep this in mind when suggesting system-level changes.
+1. **Surgical Nix Changes**: Respect the module structure (`hosts/`, `modules/`, etc.).
+2. **Symlink Awareness**: UI configs in `config/` are symlinked via `mkOutOfStoreSymlink`.
+3. **Multi-Host Safety**: When adding packages/configs, decide if they belong in `home-common.nix` (shared) or machine-specific files.
+4. **Git Visibility**: Nix Flakes require files to be tracked in Git. Always remind the user to `git add` new files.
 5. **Python Engineering**: The user is a senior Python engineer; provide high-quality, idiomatic code and guidance.
