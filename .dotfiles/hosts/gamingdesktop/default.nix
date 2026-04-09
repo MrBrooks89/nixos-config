@@ -74,7 +74,7 @@
       mrbrooks = {
         isNormalUser = true;
         description = "MrBrooks";
-        extraGroups = ["networkmanager" "wheel" "audio" "sharedgroup" "docker"];
+        extraGroups = ["networkmanager" "wheel" "audio" "sharedgroup" "docker" "gamemode"];
       };
     };
   };

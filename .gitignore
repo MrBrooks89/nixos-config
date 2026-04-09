@@ -1,5 +1,7 @@
 # ignore everything
 /*
+# ignore GEMINI.md
+GEMINI.md
 # do not ignore the .gitignore file
 !.gitignore
 # do not ignore /etc/.dotfiles

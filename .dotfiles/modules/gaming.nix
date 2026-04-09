@@ -21,6 +21,15 @@ in {
     };
 
     programs.gamemode.enable = true;
+    programs.gamemode.settings = {
+      general = {
+        renice = 10;
+      };
+      custom = {
+        start = "${pkgs.libnotify}/bin/notify-send 'GameMode' 'GameMode has started'";
+        end = "${pkgs.libnotify}/bin/notify-send 'GameMode' 'GameMode has ended'";
+      };
+    };
 
     # Gaming Hardware / Drivers
     hardware.xpad-noone.enable = false;
