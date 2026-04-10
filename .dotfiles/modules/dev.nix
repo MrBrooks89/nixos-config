@@ -46,11 +46,12 @@ in {
       sshfs
       gemini-cli
       bootdev-cli
-      
+      claude-code
+
       # Python dependencies often needed for Wayland/UI libs
       python3.pkgs.xkbcommon
       python3.pkgs.pywayland
-      
+
       # Misc Dev
       electron
       fping
