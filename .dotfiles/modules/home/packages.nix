@@ -31,6 +31,7 @@
     vlc
     vscodium
     wireshark
+    ringcentral
 
     # Security
     amass

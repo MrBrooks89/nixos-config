@@ -34,6 +34,7 @@
       "nn" = "nvim";
       "vim" = "nvim";
       "ping" = "fping -c 25";
+      "ringcentral" = "ringcentral-community-app";
     };
 
     # Use initContent to source environment variables from the .env file
