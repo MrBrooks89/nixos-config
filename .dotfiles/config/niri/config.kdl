@@ -203,7 +203,7 @@ window-rule {
     match app-id="teams"
     match app-id="steam"
     match app-id="kitty"
-    match app-id="ringcentral"
+    match title="RingCentral"
     match app-id="com.obsproject.Studio"
 match app-id="vlc"
 match app-id="mpv"
@@ -244,7 +244,7 @@ binds {
     // Open Mako History
     Mod+H { spawn-sh "~/.config/niri/mako_history.sh"; }
     // Open RingCentral
-    Mod+R hotkey-overlay-title="Open RingCentral Phone App" {spawn "ringcentral";}
+    Mod+R hotkey-overlay-title="Open RingCentral Phone App" {spawn "ringcentral-community-app";}
     
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
