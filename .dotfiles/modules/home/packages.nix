@@ -20,24 +20,8 @@
     stress-ng
     vim
 
-    # GUI Apps
-    discord
-    firefox
-    freerdp
-    nautilus
-    kdePackages.konsole
-    libreoffice-qt6-fresh
-    obs-studio
-    vlc
-    vscodium
-    wireshark
-    ringcentral
-
     # Security
     amass
     nmap
-
-    # Teams
-    teams-for-linux
   ];
 }

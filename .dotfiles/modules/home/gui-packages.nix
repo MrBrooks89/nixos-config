@@ -1,0 +1,20 @@
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    # GUI Apps
+    discord
+    exiled-exchange
+    firefox
+    freerdp
+    nautilus
+    kdePackages.konsole
+    libreoffice-qt6-fresh
+    obs-studio
+    vlc
+    vscodium
+    wireshark
+    ringcentral
+
+    # Teams
+    teams-for-linux
+  ];
+}

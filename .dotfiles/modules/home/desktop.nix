@@ -7,6 +7,10 @@
 with lib; let
   cfg = config.myHomeModules.desktop;
 in {
+  imports = [
+    ./gui-packages.nix
+  ];
+
   options.myHomeModules.desktop = {
     enable = mkEnableOption "Enable Home Desktop Environment Configs (Niri, Waybar, Kitty, etc.)";
   };

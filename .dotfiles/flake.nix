@@ -50,6 +50,7 @@
       overlays = [
         (final: prev: {
           ringcentral = final.callPackage ./pkgs/ringcentral/ringcentral.nix { };
+          exiled-exchange = final.callPackage ./pkgs/exiled-exchange/default.nix { };
         })
       ];
     };
