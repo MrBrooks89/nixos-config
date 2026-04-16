@@ -49,8 +49,8 @@
       config.allowUnfree = true;
       overlays = [
         (final: prev: {
-          ringcentral = final.callPackage ./pkgs/ringcentral/ringcentral.nix { };
-          exiled-exchange = final.callPackage ./pkgs/exiled-exchange/default.nix { };
+          ringcentral = final.callPackage ./pkgs/ringcentral {};
+          exiled-exchange = final.callPackage ./pkgs/exiled-exchange {};
         })
       ];
     };
