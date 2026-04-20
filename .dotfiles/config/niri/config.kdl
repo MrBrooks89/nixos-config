@@ -253,7 +253,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Application Launcher: Noctalia" { spawn-sh "noctalia-shell ipc call launcher toggle"; } //"sherlock"; }
     Mod+L hotkey-overlay-title="Lock the Screen: Noctalia Lockscreen" { spawn-sh "noctalia-shell ipc call lockScreen lock"; } //"hyperlock"; }
-    Mod+E hotkey-overlay-title="File Explorer" {spawn-sh "kitty yazi"; }
+    Mod+E hotkey-overlay-title="File Explorer" {spawn "nautilus"; }
 
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
