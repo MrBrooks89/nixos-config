@@ -205,8 +205,10 @@ window-rule {
     match app-id="kitty"
     match title="RingCentral"
     match app-id="com.obsproject.Studio"
-match app-id="vlc"
-match app-id="mpv"
+    match app-id="vlc"
+    match app-id="mpv"
+    match app-id="joplin"
+    match app-id="codium"
     opacity 1.0
 }
 window-rule {
@@ -234,7 +236,7 @@ binds {
     // Show keybinds
     Mod+K { show-hotkey-overlay; }
     // Open notes in nvim
-    Mod+N { spawn-sh "kitty nvim ~/Documents/Notes/"; }
+    Mod+N hotkey-overlay-title="Open Joplin Notes" { spawn "joplin-desktop"; }
     // Open Browser
     Mod+B hotkey-overlay-title="Open Browser: Firefox" {spawn "firefox";}
     // Open Music player Cider

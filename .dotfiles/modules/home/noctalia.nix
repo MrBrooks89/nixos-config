@@ -199,6 +199,7 @@
 
       dock = {
         displayMode = "auto_hide";
+        enabled = false;
         backgroundOpacity = 0;
         floatingRatio = 0;
         onlySameOutput = false;

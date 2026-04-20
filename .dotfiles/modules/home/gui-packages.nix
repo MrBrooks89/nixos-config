@@ -13,6 +13,7 @@
     vscodium
     wireshark
     ringcentral
+    joplin-desktop
 
     # Teams
     teams-for-linux
