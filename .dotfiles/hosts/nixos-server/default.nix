@@ -44,7 +44,7 @@
     enable = true;
     systemCronJobs = [
       # Runs at 2am every Friday as mrbrooks
-      "0 2 * * 5 mrbrooks bash /home/mrbrooks/backup_to_nas.sh"
+      "0 2 * * 5 root /home/mrbrooks/backup_to_nas.sh"
       "0 5 * * * mrbrooks docker restart qbittorrent prowlarr radarr sonarr"
     ];
   };
