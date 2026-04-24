@@ -7,15 +7,15 @@
 with lib; let
   cfg = config.myHomeModules.desktop;
 in {
+  imports = [
+    ./gui-packages.nix
+  ];
+
   options.myHomeModules.desktop = {
     enable = mkEnableOption "Enable Home Desktop Environment Configs (Niri, Waybar, Kitty, etc.)";
   };
 
   config = mkIf cfg.enable {
-    imports = [
-      ./gui-packages.nix
-    ];
-
     # Symlink the entire directories instead of individual files
     xdg.configFile."kitty".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/kitty";
     xdg.configFile."niri".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/niri";
