@@ -32,16 +32,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+outputs = {
+  nixpkgs,
+  home-manager,
+  nvf,
+  nix-cachyos-kernel,
+  noctalia-qs,
+  noctalia,
+  ...
+} @ inputs: let
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    nvf,
-    nix-cachyos-kernel,
-    noctalia-qs,
-    noctalia,
-    ...
-  } @ inputs: let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = import nixpkgs {

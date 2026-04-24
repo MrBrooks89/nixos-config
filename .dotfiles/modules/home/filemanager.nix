@@ -13,7 +13,7 @@ in {
 
   config = mkIf cfg.enable {
     # Symlink the entire directory
-    xdg.configFile."yazi".source = config.lib.file.mkOutOfStoreSymlink "/home/mrbrooks/.dotfiles/config/yazi";
+    xdg.configFile."yazi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/yazi";
 
     # Note: We keep yazi.enable = false if it conflicts, 
     # but usually yazi's HM module doesn't fight as much as Kitty's.

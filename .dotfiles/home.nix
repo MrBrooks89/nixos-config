@@ -7,7 +7,6 @@
 }: {
   imports = [
     ./home-common.nix
-    ./modules/home/sherlock.nix
     ./modules/home/noctalia.nix
     ./modules/home/theme.nix
     ./modules/home/desktop.nix

@@ -295,7 +295,7 @@ binds {
     Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
-    // Power Menu Using Sherlock  
+    // Power Menu Using Noctalia Shell
     Mod+P { spawn-sh "noctalia-shell ipc call sessionMenu toggle"; }
 
 

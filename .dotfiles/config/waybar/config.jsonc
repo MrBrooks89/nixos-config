@@ -83,11 +83,11 @@
 
     "custom/launcher":{
         "format": "❄️",
-        "on-click": "sherlock"
+        "on-click": "noctalia-shell ipc call launcher toggle"
     },
     "custom/power":{
         "format": " ",
-        "on-click": "sherlock -sm pm"
+        "on-click": "noctalia-shell ipc call sessionMenu toggle"
     },
     "temperature": {
 	    "interval": 10,

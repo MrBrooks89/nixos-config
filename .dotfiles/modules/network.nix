@@ -37,7 +37,7 @@ in {
     services.blueman.enable = true;
 
     # TCP BBR Congestion Control & Performance Tweaks
-    boot.kernelModules = ["tcp_bbr" "iptable_nat" "iptables"];
+    boot.kernelModules = ["tcp_bbr"];
     boot.kernel.sysctl = {
       "net.ipv4.tcp_congestion_control" = "bbr";
       "net.core.default_qdisc" = "fq";

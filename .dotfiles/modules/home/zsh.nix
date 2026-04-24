@@ -28,9 +28,9 @@
     ];
     shellAliases = {
       "cat" = "bat";
-      "ll" = "exa -al --icons";
-      "ls" = "exa -a --icons";
-      "lt" = "exa -a --tree --level=1 --icons";
+      "ll" = "eza -al --icons";
+      "ls" = "eza -a --icons";
+      "lt" = "eza -a --tree --level=1 --icons";
       "nn" = "nvim";
       "vim" = "nvim";
       "ping" = "fping -c 25";
@@ -38,8 +38,8 @@
       "code" = "codium";
     };
 
-    # Use initContent to source environment variables from the .env file
-    initContent = ''
+    # Use initExtra to source environment variables from the .env file
+    initExtra = ''
       if [ -f "$HOME/.env" ]; then
         while IFS= read -r line; do
           if [[ -n "$line" && "$line" != \#* ]]; then
