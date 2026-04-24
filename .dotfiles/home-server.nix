@@ -14,5 +14,5 @@
   # Explicitly disable GUI modules for the server
   myHomeModules.theme.enable = false;
   myHomeModules.desktop.enable = false;
-  myHomeModules.filemanager.enable = true; # Keep your terminal-based file manager (Yazi) if you want!
+  myHomeModules.filemanager.enable = true; 
 }

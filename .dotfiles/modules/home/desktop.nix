@@ -21,8 +21,5 @@ in {
     xdg.configFile."niri".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/niri";
     xdg.configFile."waybar".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/waybar";
     xdg.configFile."mako".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/mako";
-
-    # We do NOT use programs.kitty.enable = true here because 
-    # we are managing the config manually via symlink.
   };
 }
