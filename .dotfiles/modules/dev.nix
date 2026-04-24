@@ -21,6 +21,12 @@ in {
       package = pkgs.nix-ld;
     };
 
+    programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
+
     # Development Packages
     environment.systemPackages = with pkgs; [
       # Languages & Runtimes
