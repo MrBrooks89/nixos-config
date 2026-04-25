@@ -53,7 +53,7 @@ in {
       mangohud
       mangojuice
       protontricks
-      protonup-ng
+      protonup-rs
       steamtinkerlaunch
       vkbasalt
       vulkan-tools

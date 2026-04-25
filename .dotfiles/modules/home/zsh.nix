@@ -38,8 +38,8 @@
       "code" = "codium";
     };
 
-    # Use initExtra to source environment variables from the .env file
-    initExtra = ''
+    # Use initContent to source environment variables from the .env file
+    initContent = ''
       if [ -f "$HOME/.env" ]; then
         while IFS= read -r line; do
           if [[ -n "$line" && "$line" != \#* ]]; then
