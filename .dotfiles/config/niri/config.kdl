@@ -231,7 +231,7 @@ binds {
     // Open Mako History
     Mod+H { spawn-sh "~/.config/niri/mako_history.sh"; }
     // Open RingCentral
-    Mod+R hotkey-overlay-title="Open RingCentral Phone App" {spawn "ringcentral-community-app";}
+    Mod+R hotkey-overlay-title="Open RingCentral Phone App" {spawn "ringcentral-embeddable";}
     
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.

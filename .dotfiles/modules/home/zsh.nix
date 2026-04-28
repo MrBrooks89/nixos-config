@@ -34,7 +34,7 @@
       "nn" = "nvim";
       "vim" = "nvim";
       "ping" = "fping -c 25";
-      "ringcentral" = "ringcentral-community-app";
+      "ringcentral" = "ringcentral-embeddable";
       "code" = "codium";
     };
 
