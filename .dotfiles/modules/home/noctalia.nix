@@ -37,7 +37,6 @@
         widgets = {
           left = [
             {id = "SystemMonitor";}
-            {id = "ActiveWindow";}
             {id = "MediaMini";}
           ];
           center = [
