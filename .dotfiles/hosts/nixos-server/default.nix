@@ -43,8 +43,6 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-      # Runs at 2am every Friday 
-      "0 2 * * 5 root /home/mrbrooks/backup_to_nas.sh"
       # Runs at 5am every day
       "0 5 * * * mrbrooks docker restart qbittorrent prowlarr radarr sonarr"
     ];
